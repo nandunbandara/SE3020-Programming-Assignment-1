@@ -10,5 +10,6 @@ package sensor;
  * @author ntban_000
  */
 public interface AirPressure {
-    
+    double getAirPressure();
+    void setAirPressure(double airPressure);
 }
