@@ -9,6 +9,8 @@ package sensor;
  *
  * @author ntban_000
  */
-public class Sensor {
-    
+public class SensorApplication {
+    public static void main(String[] args){
+        
+    }
 }
