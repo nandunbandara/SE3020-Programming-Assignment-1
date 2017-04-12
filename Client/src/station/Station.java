@@ -3,12 +3,12 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package server;
+package station;
 
 /**
  *
  * @author ntban_000
  */
-public class Sensor {
+public class Station {
     
 }
