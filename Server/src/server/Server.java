@@ -8,17 +8,18 @@ package server;
 import java.net.*;
 import java.io.*;
 import com.google.gson.*;
+import java.util.*;
 /**
  *
  * @author ntban_000
  */
 public class Server {
 //    private List<GSON> 
-    public static void main(String[] args){
+    public static void main(String[] args) throws ClassNotFoundException{
         ServerSocket serverSock = null;
         Socket clientSock = null;
         ObjectInputStream input = null;
-        
+        HashMap<String,Gson> weatherRecords = new HashMap<>();
         final int PORT = 6666;
         
         try{
@@ -33,6 +34,7 @@ public class Server {
             input = new ObjectInputStream(clientSock.getInputStream());
             
             while(true){
+                Gson object = (Gson)input.readObject();
                 
             }
         }catch(IOException e){
