@@ -34,8 +34,8 @@ public class Server {
             input = new ObjectInputStream(clientSock.getInputStream());
             
             while(true){
-                Gson object = (Gson)input.readObject();
-                
+                String object = (String) input.readObject();
+                System.out.println(object);
             }
         }catch(IOException e){
             e.printStackTrace();

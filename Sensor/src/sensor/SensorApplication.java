@@ -15,7 +15,11 @@ import com.google.gson.*;
  */
 public class SensorApplication {
     public static void main(String[] args){
-        Sensor sensor = new Sensor();
+        System.out.println("Enter location: ");
+        Scanner input = new Scanner(System.in);
+        String location = input.nextLine();
+        
+        Sensor sensor = new Sensor(location);
         //client socket for connection
         Socket clientSock = null;
         ObjectOutputStream clientOut = null;
@@ -26,21 +30,23 @@ public class SensorApplication {
             ex.printStackTrace();
         }
         
+        System.out.println("Connected to server");
         //Timer
         Timer timer = new Timer();
         Random rand = new Random();
         Gson gson = new Gson();
         if(clientSock != null && clientOut != null){
-            timer.schedule(new TimerTask(){
-                @Override
-                public void run(){
-                    sensor.setRainfall(rand.nextDouble()*100);
-                    sensor.setHumidity(rand.nextDouble()*100);
-                    sensor.setAirPressure(rand.nextDouble()*100);
-                    String json = gson.toJson(sensor);
+            while(true){
+                sensor.setRainfall(rand.nextDouble()*100);
+                sensor.setHumidity(rand.nextDouble()*100);
+                sensor.setAirPressure(rand.nextDouble()*100);
+                String json = gson.toJson(sensor);
+                try{
                     clientOut.writeObject(json);
+                }catch(Exception e){
+                    e.printStackTrace();
                 }
-            }, 1000);
+            }
         }
     }
 }
