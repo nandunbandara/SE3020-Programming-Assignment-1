@@ -70,7 +70,9 @@ class SensorThread extends Thread{
         }
         while(true){
             try {
-                System.out.println((String)input.readObject());
+                String object = (String) input.readObject();
+                JsonObject jsonObject = new JsonParser().parse(object).getAsJsonObject();
+//                System.out.println(jsonObject.getAsJsonObject(object))
             } catch (IOException ex) {
                 Logger.getLogger(SensorThread.class.getName()).log(Level.SEVERE, null, ex);
             } catch (ClassNotFoundException ex) {
