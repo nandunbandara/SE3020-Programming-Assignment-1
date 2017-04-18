@@ -9,6 +9,8 @@ import java.net.*;
 import java.io.*;
 import com.google.gson.*;
 import java.util.*;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 /**
  *
  * @author ntban_000
@@ -29,16 +31,51 @@ public class Server {
         }
         System.out.println("Server listening on port "+PORT+" for sensors");
         
-        try{
-            clientSock = serverSock.accept();
-            input = new ObjectInputStream(clientSock.getInputStream());
-            
-            while(true){
-                String object = (String) input.readObject();
-                System.out.println(object);
+//        try{
+//            clientSock = serverSock.accept();
+//            input = new ObjectInputStream(clientSock.getInputStream());
+//            
+//            while(true){
+//                String object = (String) input.readObject();
+//                System.out.println(object);
+//            }
+//        }catch(IOException e){
+//            e.printStackTrace();
+//        }
+        while(true){
+            try {
+                clientSock = serverSock.accept();
+                new SensorThread(clientSock).start();
+            } catch (IOException ex) {
+                Logger.getLogger(Server.class.getName()).log(Level.SEVERE, null, ex);
             }
-        }catch(IOException e){
-            e.printStackTrace();
+        }
+    }
+}
+//used to create seperate threads for each connected sensor
+class SensorThread extends Thread{
+    private Socket clientSocket;
+    private ObjectInputStream input;
+    
+    public SensorThread(Socket clientSocket){
+        this.clientSocket = clientSocket;
+    }
+    
+    @Override
+    public void run(){
+        try {
+            input = new ObjectInputStream(clientSocket.getInputStream());
+        } catch (IOException ex) {
+            ex.printStackTrace();
+        }
+        while(true){
+            try {
+                System.out.println((String)input.readObject());
+            } catch (IOException ex) {
+                Logger.getLogger(SensorThread.class.getName()).log(Level.SEVERE, null, ex);
+            } catch (ClassNotFoundException ex) {
+                Logger.getLogger(SensorThread.class.getName()).log(Level.SEVERE, null, ex);
+            }
         }
     }
 }
