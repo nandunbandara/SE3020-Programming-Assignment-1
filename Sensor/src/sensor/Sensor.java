@@ -9,11 +9,11 @@ package sensor;
  *
  * @author ntban_000
  */
-public class Sensor implements Rainfall, Humidity, AirPressure{
+public class Sensor{
     private String location;
-    private double rainfall;
-    private double humidity;
-    private double airPressure;
+    private String type;
+    private double value;
+    private String unit;
     
     public Sensor(String location){
         this.location = location;
@@ -26,33 +26,27 @@ public class Sensor implements Rainfall, Humidity, AirPressure{
         this.location = location;
     }
     
-    @Override
-    public double getRainfall() {
-        return rainfall;
+    public void setType(String type){
+        this.type = type;
     }
-
-    @Override
-    public void setRainfall(double rainfall) {
-        this.rainfall = rainfall;
+    
+    public String getType(){
+        return type;
     }
-
-    @Override
-    public double getHumidity() {
-        return humidity;
+    
+    public void setValue(double value){
+        this.value = value;
     }
-
-    @Override
-    public void setHumidity(double humidity) {
-        this.humidity = humidity;
+    
+    public double getValue(){
+        return value;
     }
-
-    @Override
-    public double getAirPressure() {
-        return airPressure;
+    
+    public void setUnit(String unit){
+        this.unit = unit;
     }
-
-    @Override
-    public void setAirPressure(double airPressure) {
-        this.airPressure = airPressure;
+    
+    public String getUnit(){
+        return unit;
     }
 }

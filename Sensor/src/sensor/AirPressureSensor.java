@@ -9,7 +9,11 @@ package sensor;
  *
  * @author ntban_000
  */
-public interface Rainfall {
-    double getRainfall();
-    void setRainfall(double rainfall);
+public class AirPressureSensor extends Sensor{
+    
+    public AirPressureSensor(String location){
+        super(location);
+        super.setUnit("psi");
+        super.setType("airpressure");
+    }
 }

@@ -30,18 +30,6 @@ public class Server {
             e.printStackTrace();
         }
         System.out.println("Server listening on port "+PORT+" for sensors");
-        
-//        try{
-//            clientSock = serverSock.accept();
-//            input = new ObjectInputStream(clientSock.getInputStream());
-//            
-//            while(true){
-//                String object = (String) input.readObject();
-//                System.out.println(object);
-//            }
-//        }catch(IOException e){
-//            e.printStackTrace();
-//        }
         while(true){
             try {
                 clientSock = serverSock.accept();
@@ -56,7 +44,7 @@ public class Server {
 class SensorThread extends Thread{
     private Socket clientSocket;
     private ObjectInputStream input;
-    
+    private FileWriter fileOutput;
     public SensorThread(Socket clientSocket){
         this.clientSocket = clientSocket;
     }
@@ -70,9 +58,19 @@ class SensorThread extends Thread{
         }
         while(true){
             try {
-                String object = (String) input.readObject();
-                JsonObject jsonObject = new JsonParser().parse(object).getAsJsonObject();
-//                System.out.println(jsonObject.getAsJsonObject(object))
+                String[] object = (String[]) input.readObject();
+ //write to file
+                
+                for(int i=0;i<object.length;i++){
+                    JsonObject jsonObject = new JsonParser().parse(object[i]).getAsJsonObject();
+                    System.out.println(jsonObject);
+                    String location = jsonObject.get("location").toString().split("\"")[1];
+                    String type = jsonObject.get("type").toString().split("\"")[1];
+                    fileOutput = new FileWriter(location+"_"+type+".txt",true);
+                    fileOutput.write(jsonObject.toString()+"\n");
+                    fileOutput.close();
+                }
+                
             } catch (IOException ex) {
                 Logger.getLogger(SensorThread.class.getName()).log(Level.SEVERE, null, ex);
             } catch (ClassNotFoundException ex) {

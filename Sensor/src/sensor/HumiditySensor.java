@@ -9,7 +9,10 @@ package sensor;
  *
  * @author ntban_000
  */
-public interface AirPressure {
-    double getAirPressure();
-    void setAirPressure(double airPressure);
+public class HumiditySensor extends Sensor{
+    public HumiditySensor(String location){
+        super(location);
+        super.setUnit("%");
+        super.setType("humidity");
+    }
 }

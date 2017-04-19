@@ -9,20 +9,37 @@ import java.net.*;
 import java.io.*;
 import java.util.*;
 import com.google.gson.*;
+import java.util.concurrent.TimeUnit;
 /**
  *
  * @author ntban_000
  */
 public class SensorApplication {
-    public static void main(String[] args){
+    private static Socket clientSock;
+    private static ObjectOutputStream clientOut;
+    private static Sensor sensor;
+    public static void main(String[] args) throws InterruptedException{
         System.out.println("Enter location: ");
         Scanner input = new Scanner(System.in);
         String location = input.nextLine();
+        System.out.println("Available Sensor Types:\n1.\tAir Pressure\n2.\tHumidity\n3.\tRainfall\n");
+        System.out.println("Select type of sensor: ");
+        int type = input.nextInt();
         
-        Sensor sensor = new Sensor(location);
-        //client socket for connection
-        Socket clientSock = null;
-        ObjectOutputStream clientOut = null;
+        switch(type){
+            case 1:
+                sensor = new AirPressureSensor(location);
+                break;
+            case 2:
+                sensor = new HumiditySensor(location);
+                break;
+            case 3:
+                sensor = new RainfallSensor(location);
+                break;
+            default:
+                System.out.println("Please enter a valid option");
+        }
+        
         try{
             clientSock = new Socket("127.0.0.1",6666);
             clientOut = new ObjectOutputStream(clientSock.getOutputStream());
@@ -31,22 +48,27 @@ public class SensorApplication {
         }
         
         System.out.println("Connected to server");
-        //Timer
-        Timer timer = new Timer();
+        
         Random rand = new Random();
         Gson gson = new Gson();
+        int count = 0;
+        String readings[] = new String[12];
         if(clientSock != null && clientOut != null){
             while(true){
-                sensor.setRainfall(rand.nextDouble()*100);
-                sensor.setHumidity(rand.nextDouble()*100);
-                sensor.setAirPressure(rand.nextDouble()*100);
-                String json = gson.toJson(sensor);
+                for(int i=0;i<12;i++){
+                    sensor.setValue(rand.nextDouble()*100);
+                    String json = gson.toJson(sensor);
+                    readings[i]=json;
+                    TimeUnit.SECONDS.sleep(1);
+                }
                 try{
-                    clientOut.writeObject(json);
+                    clientOut.writeObject(readings);
+                    //TimeUnit.SECONDS.sleep(1);
                 }catch(Exception e){
                     e.printStackTrace();
                 }
             }
         }
     }
+
 }

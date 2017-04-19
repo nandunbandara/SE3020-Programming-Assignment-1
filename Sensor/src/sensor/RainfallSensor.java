@@ -9,7 +9,10 @@ package sensor;
  *
  * @author ntban_000
  */
-public interface Humidity {
-    double getHumidity();
-    void setHumidity(double humidity);
+public class RainfallSensor extends Sensor{    
+    public RainfallSensor(String location){
+        super(location);
+        super.setUnit("mm");
+        super.setType("rainfall");
+    }
 }
