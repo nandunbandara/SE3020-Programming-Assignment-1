@@ -1,0 +1,12 @@
+{"location":"kurunegala","type":"humidity","value":64.70438441155099,"unit":"%"}
+{"location":"kurunegala","type":"humidity","value":20.831263908997965,"unit":"%"}
+{"location":"kurunegala","type":"humidity","value":61.332914993049,"unit":"%"}
+{"location":"kurunegala","type":"humidity","value":30.546418928397433,"unit":"%"}
+{"location":"kurunegala","type":"humidity","value":37.87349950662395,"unit":"%"}
+{"location":"kurunegala","type":"humidity","value":79.91613758556659,"unit":"%"}
+{"location":"kurunegala","type":"humidity","value":76.83730953527957,"unit":"%"}
+{"location":"kurunegala","type":"humidity","value":4.396444162987468,"unit":"%"}
+{"location":"kurunegala","type":"humidity","value":71.91062098146891,"unit":"%"}
+{"location":"kurunegala","type":"humidity","value":11.574121255040337,"unit":"%"}
+{"location":"kurunegala","type":"humidity","value":37.97830206904077,"unit":"%"}
+{"location":"kurunegala","type":"humidity","value":81.8367894787549,"unit":"%"}

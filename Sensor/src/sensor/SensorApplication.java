@@ -18,7 +18,7 @@ public class SensorApplication {
     private static Socket clientSock;
     private static ObjectOutputStream clientOut;
     private static Sensor sensor;
-    public static void main(String[] args) throws InterruptedException{
+    public static void main(String[] args) throws InterruptedException, IOException{
         System.out.println("Enter location: ");
         Scanner input = new Scanner(System.in);
         String location = input.nextLine();
@@ -38,6 +38,8 @@ public class SensorApplication {
                 break;
             default:
                 System.out.println("Please enter a valid option");
+                return;
+                
         }
         
         try{
@@ -49,12 +51,14 @@ public class SensorApplication {
         
         System.out.println("Connected to server");
         
+        String[] config = {location,type==1?"airepressure":(type==2?"humidity":"rainfall")};
         Random rand = new Random();
         Gson gson = new Gson();
         int count = 0;
         String readings[] = new String[12];
         if(clientSock != null && clientOut != null){
             while(true){
+                clientOut.writeObject(config);
                 for(int i=0;i<12;i++){
                     sensor.setValue(rand.nextDouble()*100);
                     String json = gson.toJson(sensor);
@@ -64,11 +68,14 @@ public class SensorApplication {
                 try{
                     clientOut.writeObject(readings);
                     //TimeUnit.SECONDS.sleep(1);
-                }catch(Exception e){
-                    e.printStackTrace();
+                }catch(IOException e){
+                    System.out.println("Connection to the Server broke!");
+                    break;
                 }
             }
         }
+        clientOut.close();
+        clientSock.close();
     }
 
 }
