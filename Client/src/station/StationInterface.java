@@ -23,6 +23,7 @@ public class StationInterface extends javax.swing.JFrame{
      */
     public StationInterface() {
         initComponents();
+        txtLog.setCaretPosition(txtLog.getDocument().getLength());
     }
 
     /**
@@ -38,7 +39,6 @@ public class StationInterface extends javax.swing.JFrame{
         jLabel1 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         jList1 = new javax.swing.JList<>();
-        jLabel2 = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
         btnLogout = new javax.swing.JButton();
         jScrollPane3 = new javax.swing.JScrollPane();
@@ -46,12 +46,11 @@ public class StationInterface extends javax.swing.JFrame{
         lblConnectedSensors = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setResizable(false);
 
         jLabel1.setText("Connected Sensors: ");
 
         jScrollPane1.setViewportView(jList1);
-
-        jLabel2.setText("Connected Clients:");
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -81,9 +80,7 @@ public class StationInterface extends javax.swing.JFrame{
                         .addComponent(jLabel1)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(lblConnectedSensors)
-                        .addGap(35, 35, 35)
-                        .addComponent(jLabel2)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 270, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 386, Short.MAX_VALUE)
                         .addComponent(btnLogout))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 136, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -99,7 +96,6 @@ public class StationInterface extends javax.swing.JFrame{
                 .addContainerGap()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel1)
-                    .addComponent(jLabel2)
                     .addComponent(btnLogout)
                     .addComponent(lblConnectedSensors))
                 .addGap(18, 18, 18)
@@ -164,7 +160,6 @@ public class StationInterface extends javax.swing.JFrame{
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnLogout;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
     private javax.swing.JList<String> jList1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
@@ -180,5 +175,9 @@ public class StationInterface extends javax.swing.JFrame{
     
     public void setConnectedSensors(int count){
         lblConnectedSensors.setText(Integer.toString(count));
+    }
+    
+    public javax.swing.JList getConnectedSensorsList(){
+        return jList1;
     }
 }

@@ -7,6 +7,7 @@ package station;
 
 import java.rmi.Remote;
 import java.rmi.RemoteException;
+import java.util.ArrayList;
 
 /**
  *
@@ -16,4 +17,5 @@ public interface StationRMI extends Remote{
     public void alert(String alertText) throws RemoteException;
     public void addLog(String logText) throws RemoteException;
     public void setConnectedSensors(int count) throws RemoteException;
+    public void setSensorList(ArrayList<String> list) throws RemoteException;
 }

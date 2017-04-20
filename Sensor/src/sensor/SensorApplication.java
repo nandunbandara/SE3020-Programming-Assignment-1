@@ -19,11 +19,11 @@ public class SensorApplication {
     private static ObjectOutputStream clientOut;
     private static Sensor sensor;
     public static void main(String[] args) throws InterruptedException, IOException{
-        System.out.println("Enter location: ");
+        System.out.print("Enter location: ");
         Scanner input = new Scanner(System.in);
         String location = input.nextLine();
         System.out.println("Available Sensor Types:\n1.\tAir Pressure\n2.\tHumidity\n3.\tRainfall\n4.\tTemperature\n");
-        System.out.println("Select type of sensor: ");
+        System.out.print("Select type of sensor: ");
         int type = input.nextInt();
         
         switch(type){
