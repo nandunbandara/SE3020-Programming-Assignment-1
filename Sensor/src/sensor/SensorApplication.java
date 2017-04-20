@@ -22,7 +22,7 @@ public class SensorApplication {
         System.out.println("Enter location: ");
         Scanner input = new Scanner(System.in);
         String location = input.nextLine();
-        System.out.println("Available Sensor Types:\n1.\tAir Pressure\n2.\tHumidity\n3.\tRainfall\n");
+        System.out.println("Available Sensor Types:\n1.\tAir Pressure\n2.\tHumidity\n3.\tRainfall\n4.\tTemperature\n");
         System.out.println("Select type of sensor: ");
         int type = input.nextInt();
         
@@ -35,6 +35,9 @@ public class SensorApplication {
                 break;
             case 3:
                 sensor = new RainfallSensor(location);
+                break;
+            case 4:
+                sensor = new Temperature(location);
                 break;
             default:
                 System.out.println("Please enter a valid option");

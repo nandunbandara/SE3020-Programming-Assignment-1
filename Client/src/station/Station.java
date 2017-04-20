@@ -68,4 +68,9 @@ public class Station extends UnicastRemoteObject implements StationRMI, Runnable
         stationInterface = new StationInterface();
         stationInterface.show();
     }
+
+    @Override
+    public void setConnectedSensors(int count) throws RemoteException {
+        stationInterface.setConnectedSensors(count);
+    }
 }

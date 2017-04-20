@@ -42,6 +42,23 @@ public class Server extends UnicastRemoteObject implements ServerRMI, Runnable{
             reg.rebind("server",server);
             Thread thread = new Thread(server);
             thread.start();
+            Thread sensorCountThread = new Thread(new Runnable(){
+                @Override
+                public void run() {
+                    while(true){
+                        for(StationRMI station : Server.stations){
+                            try {
+                                station.setConnectedSensors(Server.sensors.size());
+                            } catch (RemoteException ex) {
+                                Logger.getLogger(Server.class.getName()).log(Level.SEVERE, null, ex);
+                            } catch(NullPointerException ne){
+                            }
+                        }
+                    }
+                }
+                
+            });
+            sensorCountThread.start();
         } catch (RemoteException ex) {
             Logger.getLogger(Server.class.getName()).log(Level.SEVERE, null, ex);
         }
@@ -78,6 +95,10 @@ public class Server extends UnicastRemoteObject implements ServerRMI, Runnable{
      @Override
     public void addStation(StationRMI station) throws RemoteException {
         Server.stations.add(station);
+    }
+    
+    public void setSensorCount(){
+        
     }
 }
 //used to create seperate threads for each connected sensor
@@ -125,6 +146,13 @@ class SensorThread extends Thread{
 //                                      System.out.print(station);
                                   }
                                 }
+                                break;
+                            case "temperature":
+                                if(value>35.00 || value<20.00){
+                                    for(StationRMI station: Server.stations)
+                                        station.alert("Alert: Temperature "+value+" in "+location+"\n");
+                                }
+                                break;
                         }
                         fileOutput = new FileWriter(location+"_"+type+".txt",true);
                         fileOutput.write(jsonObject.toString()+"\n");

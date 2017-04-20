@@ -15,4 +15,5 @@ import java.rmi.RemoteException;
 public interface StationRMI extends Remote{
     public void alert(String alertText) throws RemoteException;
     public void addLog(String logText) throws RemoteException;
+    public void setConnectedSensors(int count) throws RemoteException;
 }

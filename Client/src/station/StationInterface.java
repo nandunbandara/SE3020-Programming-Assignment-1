@@ -43,6 +43,7 @@ public class StationInterface extends javax.swing.JFrame{
         btnLogout = new javax.swing.JButton();
         jScrollPane3 = new javax.swing.JScrollPane();
         txtLog = new javax.swing.JTextPane();
+        lblConnectedSensors = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -67,6 +68,8 @@ public class StationInterface extends javax.swing.JFrame{
 
         jScrollPane3.setViewportView(txtLog);
 
+        lblConnectedSensors.setText("jLabel3");
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -76,7 +79,9 @@ public class StationInterface extends javax.swing.JFrame{
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(jLabel1)
-                        .addGap(75, 75, 75)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(lblConnectedSensors)
+                        .addGap(35, 35, 35)
                         .addComponent(jLabel2)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 270, Short.MAX_VALUE)
                         .addComponent(btnLogout))
@@ -95,7 +100,8 @@ public class StationInterface extends javax.swing.JFrame{
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel1)
                     .addComponent(jLabel2)
-                    .addComponent(btnLogout))
+                    .addComponent(btnLogout)
+                    .addComponent(lblConnectedSensors))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
@@ -164,10 +170,15 @@ public class StationInterface extends javax.swing.JFrame{
     private javax.swing.JPanel jPanel2;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane3;
+    private javax.swing.JLabel lblConnectedSensors;
     private javax.swing.JTextPane txtLog;
     // End of variables declaration//GEN-END:variables
 
     public javax.swing.JTextPane getTextPane(){
         return txtLog;
+    }
+    
+    public void setConnectedSensors(int count){
+        lblConnectedSensors.setText(Integer.toString(count));
     }
 }
