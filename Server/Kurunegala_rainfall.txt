@@ -82,3 +82,15 @@
 {"location":"Kurunegala","type":"rainfall","value":93.9052322958935,"unit":"mm"}
 {"location":"Kurunegala","type":"rainfall","value":63.0858590702683,"unit":"mm"}
 {"location":"Kurunegala","type":"rainfall","value":69.20005186044557,"unit":"mm"}
+{"location":"Kurunegala","type":"rainfall","value":76.149631936564,"unit":"mm"}
+{"location":"Kurunegala","type":"rainfall","value":64.41652667257024,"unit":"mm"}
+{"location":"Kurunegala","type":"rainfall","value":15.927939476291531,"unit":"mm"}
+{"location":"Kurunegala","type":"rainfall","value":61.601360595696555,"unit":"mm"}
+{"location":"Kurunegala","type":"rainfall","value":25.265012475969005,"unit":"mm"}
+{"location":"Kurunegala","type":"rainfall","value":25.552310870025607,"unit":"mm"}
+{"location":"Kurunegala","type":"rainfall","value":99.85510046470877,"unit":"mm"}
+{"location":"Kurunegala","type":"rainfall","value":18.92111667023929,"unit":"mm"}
+{"location":"Kurunegala","type":"rainfall","value":68.86489979900313,"unit":"mm"}
+{"location":"Kurunegala","type":"rainfall","value":21.443425070413234,"unit":"mm"}
+{"location":"Kurunegala","type":"rainfall","value":1.4145303627900119,"unit":"mm"}
+{"location":"Kurunegala","type":"rainfall","value":75.79181278964242,"unit":"mm"}

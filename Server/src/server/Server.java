@@ -27,7 +27,7 @@ public class Server extends UnicastRemoteObject implements ServerRMI, Runnable{
 //    private List<GSON>
     public static ArrayList<StationRMI> stations;
     public static ArrayList<String> sensors; 
-    
+    public static HashMap<String, SensorThread> sensorThreads;
     public Server() throws RemoteException{
         
     }
@@ -36,48 +36,14 @@ public class Server extends UnicastRemoteObject implements ServerRMI, Runnable{
         
         sensors = new ArrayList<>();
         stations = new ArrayList<StationRMI>();
+        sensorThreads = new HashMap<>();
+        
         try {
             Registry reg = LocateRegistry.createRegistry(1009);
             Server server = new Server();
             reg.rebind("server",server);
             Thread thread = new Thread(server);
             thread.start();
-            Thread sensorCountThread = new Thread(new Runnable(){
-                @Override
-                public void run() {
-                    while(true){
-                        for(StationRMI station : Server.stations){
-                            try {
-                                station.setConnectedSensors(Server.sensors.size());
-                            } catch (RemoteException ex) {
-                                System.out.println("Connection to monitoring station interrupted");
-                                break;
-                            } catch(NullPointerException ne){
-                            }
-                        }
-                    }
-                }
-                
-            });
-            sensorCountThread.start();
-            Thread sensorsThread = new Thread(new Runnable(){
-                @Override
-                public void run() {
-                    while(true){
-                        for(StationRMI station : stations){
-                            try {
-                                station.setSensorList(sensors);
-                            } catch (RemoteException ex) {
-                                break;
-                            } catch (NullPointerException ne){
-                                
-                            }
-                        }
-                    }
-                }
-                
-            });
-            sensorsThread.start();
         } catch (RemoteException ex) {
             System.out.println("Monitor station disconnected");
         }
@@ -100,11 +66,17 @@ public class Server extends UnicastRemoteObject implements ServerRMI, Runnable{
             try {
                 clientSock = serverSock.accept();
                 SensorThread sensor = new SensorThread(clientSock);
+                
+                for(String sen : sensors){
+                    System.out.println(sen);
+                }
+                updateConnectedSensors();
+                updateConnectedSensorsCount();
+                sensor.start();
                 String sensor_name = sensor.getLocation()+"-"+sensor.getType();
                 if(!sensors.contains(sensor_name)){
                     sensors.add(sensor_name);
                 }
-                sensor.start();
             } catch (IOException ex) {
                 Logger.getLogger(Server.class.getName()).log(Level.SEVERE, null, ex);
             }
@@ -116,8 +88,27 @@ public class Server extends UnicastRemoteObject implements ServerRMI, Runnable{
         Server.stations.add(station);
     }
     
-    public void setSensorCount(){
-        
+    
+    public static void updateConnectedSensors(){
+        for(StationRMI station : stations){
+            try {
+                station.setSensorList(sensors);
+            } catch (RemoteException ex) {
+                Logger.getLogger(Server.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        }
+    }
+    
+    public static void updateConnectedSensorsCount(){
+        for(StationRMI station: stations){
+            try{
+                station.setConnectedSensors(sensors.size());
+//                  station.setConnectedSensors(4);
+            }catch(RemoteException e){
+                System.out.println(e);
+            }
+            System.out.println(station.toString());
+        }
     }
 }
 //used to create seperate threads for each connected sensor
@@ -141,9 +132,11 @@ class SensorThread extends Thread{
             ex.printStackTrace();
         }
         while(true){
+            Server.updateConnectedSensors();
+            Server.updateConnectedSensorsCount();
             try {
                 String[] object = (String[]) input.readObject();
-                System.out.println(object[0]);
+//                System.out.println(object[0]);
                 if(object.length==2){
                     location = object[0];
                     type = object[1];
