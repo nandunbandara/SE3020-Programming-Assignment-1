@@ -70,7 +70,7 @@ public class Station extends UnicastRemoteObject implements StationRMI, Runnable
         panel.add(controls, BorderLayout.CENTER);
         
         JOptionPane.showMessageDialog(frame, panel, "login", JOptionPane.OK_CANCEL_OPTION);
-        if(!(username.getText().equals("user"))&&(new String(password.getPassword()).equals("password"))){
+        if(!(username.getText().equals("user"))&&!(new String(password.getPassword()).equals("password"))){
             System.exit(0);
         }
         //end login
@@ -78,17 +78,20 @@ public class Station extends UnicastRemoteObject implements StationRMI, Runnable
             System.setSecurityManager(new RMISecurityManager());
             Registry reg = LocateRegistry.getRegistry("localhost",1009);
             server = (ServerRMI) reg.lookup("server");
-//            ServerRMI server = (ServerRMI) Naming.lookup("rmi://localhost:1009/server");
+
             
             station = new Station();
             server.addStation(station);
             station.run();
         }catch(ConnectException e){
             javax.swing.JOptionPane.showMessageDialog(stationInterface, "Server is not running!");
+            System.exit(0);
         }catch(RemoteException e){
             javax.swing.JOptionPane.showMessageDialog(stationInterface, e);
+            System.exit(0);
         }catch(NotBoundException e){
             javax.swing.JOptionPane.showConfirmDialog(stationInterface, e);
+            System.exit(0);
         }
     }
     @Override
@@ -98,15 +101,11 @@ public class Station extends UnicastRemoteObject implements StationRMI, Runnable
         SimpleAttributeSet red = new SimpleAttributeSet();
         StyleConstants.setFontFamily(red, "Courier New Italic");
         StyleConstants.setForeground(red, Color.RED);
-            //        try {
-//            doc.insertString(doc.getLength(), alertText, null);
-//        } catch (BadLocationException ex) {
-//            Logger.getLogger(StationInterface.class.getName()).log(Level.SEVERE, null, ex);
-//        }
+            
         try{
             doc.insertString(doc.getLength(), alertText, red);
         } catch (BadLocationException ex) {
-            Logger.getLogger(Station.class.getName()).log(Level.SEVERE, null, ex);
+            System.out.println("Error writing logs/alerts");
         }
         stationInterface.getTextPane().setCaretPosition(doc.getLength());
     }
@@ -117,15 +116,11 @@ public class Station extends UnicastRemoteObject implements StationRMI, Runnable
         SimpleAttributeSet blue = new SimpleAttributeSet();
         StyleConstants.setFontFamily(blue, "Courier New Italic");
         StyleConstants.setForeground(blue, Color.BLUE);
-            //        try {
-//            doc.insertString(doc.getLength(), logText, null);
-//        } catch (BadLocationException ex) {
-//            Logger.getLogger(StationInterface.class.getName()).log(Level.SEVERE, null, ex);
-//        }
+
         try{
             doc.insertString(doc.getLength(), logText+"\n", blue);
         } catch (BadLocationException ex) {
-            Logger.getLogger(Station.class.getName()).log(Level.SEVERE, null, ex);
+            System.out.println("Error writing logs/alerts");
         }
         stationInterface.getTextPane().setCaretPosition(doc.getLength());
     }

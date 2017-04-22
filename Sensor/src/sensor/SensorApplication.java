@@ -90,11 +90,10 @@ public class SensorApplication {
                     sensor.setValue(rand.nextDouble()*100);
                     String json = gson.toJson(sensor);
                     readings[i]=json;
-                    TimeUnit.SECONDS.sleep(1);
+                    TimeUnit.MINUTES.sleep(5);
                 }
                 try{
                     clientOut.writeObject(readings);
-                    //TimeUnit.SECONDS.sleep(1);
                 }catch(IOException e){
                     System.out.println("Connection to the Server broke!");
                     break;

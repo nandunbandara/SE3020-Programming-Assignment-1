@@ -68,10 +68,6 @@ public class Server extends UnicastRemoteObject implements ServerRMI, Runnable{
                 SensorThread sensor = new SensorThread(clientSock,sensors);
                 sensor.start();
                 String sensor_name = sensor.getLocation()+"-"+sensor.getType();
-//                if(!sensors.contains(sensor_name)){
-//                    sensors.add(sensor_name);
-//                    sensorThreads.put(sensor_name, sensor);
-//                }
                 updateConnectedSensors();
                 updateConnectedSensorsCount();
             } catch (IOException ex) {
@@ -102,7 +98,6 @@ public class Server extends UnicastRemoteObject implements ServerRMI, Runnable{
         for(StationRMI station: stations){
             try{
                 station.setConnectedSensors(sensors.size());
-//                  station.setConnectedSensors(4);
             }catch(RemoteException e){
                 System.out.println(e);
             }catch(NullPointerException ex){
@@ -120,7 +115,6 @@ public class Server extends UnicastRemoteObject implements ServerRMI, Runnable{
         for(StationRMI station: stations){
             try{
                 station.setConnectedSensors(sensors.size());
-//                  station.setConnectedSensors(4);
             }catch(RemoteException e){
                 System.out.println(e);
             }
@@ -195,7 +189,6 @@ class SensorThread extends Thread{
             Server.updateConnectedSensorsCount();
             try {
                 String[] object = (String[]) input.readObject();
-//                System.out.println(object[0]);
                 if(object.length==1){
                     if(object[0].startsWith("CLOSE")){
                         String sensor_name = object[0].split("_")[1]+"_"+object[0].split("_")[2];
@@ -219,7 +212,6 @@ class SensorThread extends Thread{
                     //write to file
                     for(int i=0;i<object.length;i++){
                         JsonObject jsonObject = new JsonParser().parse(object[i]).getAsJsonObject();
-    //                    System.out.println(jsonObject);
                         location = jsonObject.get("location").toString().split("\"")[1];
                         type = jsonObject.get("type").toString().split("\"")[1];
                         //alert
@@ -230,7 +222,6 @@ class SensorThread extends Thread{
                                   //alert when rainfall is greater than 20 mm
                                   for(StationRMI station : Server.stations){
                                       station.alert("Alert: Rainfall "+value+" in "+location+"\n");
-//                                      System.out.print(station);
                                   }
                                 }
                                 break;
