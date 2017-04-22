@@ -18,4 +18,5 @@ public interface StationRMI extends Remote{
     public void addLog(String logText) throws RemoteException;
     public void setConnectedSensors(int count) throws RemoteException;
     public void setSensorList(ArrayList<String> list) throws RemoteException;
+    public void setMonitoringStationsCount(int count) throws RemoteException;
 }

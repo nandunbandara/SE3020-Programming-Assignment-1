@@ -15,4 +15,8 @@ import station.StationRMI;
  */
 public interface ServerRMI extends Remote{
     public void addStation(StationRMI station) throws RemoteException;
+    public void setSensorCount() throws RemoteException;
+    public void setConnectedSensors() throws RemoteException;
+    public void setConnectedMonitoringStationsCount() throws RemoteException;
+    public void removeMonitoringStation(StationRMI station) throws RemoteException;
 }

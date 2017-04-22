@@ -65,18 +65,15 @@ public class Server extends UnicastRemoteObject implements ServerRMI, Runnable{
         while(true){
             try {
                 clientSock = serverSock.accept();
-                SensorThread sensor = new SensorThread(clientSock);
-                
-                for(String sen : sensors){
-                    System.out.println(sen);
-                }
-                updateConnectedSensors();
-                updateConnectedSensorsCount();
+                SensorThread sensor = new SensorThread(clientSock,sensors);
                 sensor.start();
                 String sensor_name = sensor.getLocation()+"-"+sensor.getType();
-                if(!sensors.contains(sensor_name)){
-                    sensors.add(sensor_name);
-                }
+//                if(!sensors.contains(sensor_name)){
+//                    sensors.add(sensor_name);
+//                    sensorThreads.put(sensor_name, sensor);
+//                }
+                updateConnectedSensors();
+                updateConnectedSensorsCount();
             } catch (IOException ex) {
                 Logger.getLogger(Server.class.getName()).log(Level.SEVERE, null, ex);
             }
@@ -107,8 +104,52 @@ public class Server extends UnicastRemoteObject implements ServerRMI, Runnable{
             }catch(RemoteException e){
                 System.out.println(e);
             }
-            System.out.println(station.toString());
         }
+    }
+    
+    public static void setSensors(String name){
+        sensors.add(name);
+    }
+
+    @Override
+    public void setSensorCount() throws RemoteException {
+        for(StationRMI station: stations){
+            try{
+                station.setConnectedSensors(sensors.size());
+//                  station.setConnectedSensors(4);
+            }catch(RemoteException e){
+                System.out.println(e);
+            }
+        }
+    }
+
+    @Override
+    public void setConnectedSensors() throws RemoteException {
+        for(StationRMI station : stations){
+            try {
+                station.setSensorList(sensors);
+            } catch (RemoteException ex) {
+                Logger.getLogger(Server.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        }
+    }
+
+    @Override
+    public void setConnectedMonitoringStationsCount() throws RemoteException {
+        for(StationRMI station : stations){
+            try {
+                station.setMonitoringStationsCount(stations.size());
+            } catch (RemoteException ex) {
+                Logger.getLogger(Server.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        }
+    }
+
+    @Override
+    public void removeMonitoringStation(StationRMI station) throws RemoteException {
+        stations.remove(station);
+        System.out.println("Station Disconnected");
+        setConnectedMonitoringStationsCount();
     }
 }
 //used to create seperate threads for each connected sensor
@@ -119,9 +160,10 @@ class SensorThread extends Thread{
     private String location;
     private String type;
     private int status;
-    private HashMap<String, SensorThread> sensors;
-    public SensorThread(Socket clientSocket){
+    private ArrayList<String> sensors;
+    public SensorThread(Socket clientSocket, ArrayList<String> sensors){
         this.clientSocket = clientSocket;
+        this.sensors = sensors;
     }
     
     @Override
@@ -140,6 +182,9 @@ class SensorThread extends Thread{
                 if(object.length==2){
                     location = object[0];
                     type = object[1];
+                    String sensor_name = location+"_"+type;
+                    if(!sensors.contains(sensor_name))
+                        sensors.add(sensor_name);
                 }else{
                     //write to file
                     for(int i=0;i<object.length;i++){
@@ -199,6 +244,5 @@ class SensorThread extends Thread{
     public int getStatus(){
         return status;
     }
-
    
 }

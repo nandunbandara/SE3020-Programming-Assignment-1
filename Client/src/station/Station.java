@@ -28,24 +28,33 @@ import javax.swing.text.StyleConstants;
  */
 public class Station extends UnicastRemoteObject implements StationRMI, Runnable{
     private static StationInterface stationInterface;
-    
+    private static ServerRMI server;
+    private static Station station;
     public Station() throws RemoteException{
         
     }
     
     public static void main(String[] args){
+        Runtime.getRuntime().addShutdownHook(new Thread(new Runnable() {
+            public void run() {
+                try {
+                    server.removeMonitoringStation(station);
+                } catch (RemoteException ex) {
+                    Logger.getLogger(Station.class.getName()).log(Level.SEVERE, null, ex);
+                }
+            }
+        }));
         try{
             System.setSecurityManager(new RMISecurityManager());
             Registry reg = LocateRegistry.getRegistry("localhost",1009);
-            ServerRMI server = (ServerRMI) reg.lookup("server");
+            server = (ServerRMI) reg.lookup("server");
 //            ServerRMI server = (ServerRMI) Naming.lookup("rmi://localhost:1009/server");
-            Station station = new Station();
+            station = new Station();
             server.addStation(station);
             station.run();
         }catch(Exception e){
             e.printStackTrace();
         }
-        
     }
     @Override
     public void alert(String alertText) throws RemoteException {
@@ -88,8 +97,16 @@ public class Station extends UnicastRemoteObject implements StationRMI, Runnable
 
     @Override
     public void run() {
-        stationInterface = new StationInterface();
-        stationInterface.show();
+        try {
+            stationInterface = new StationInterface();
+            stationInterface.show();
+            server.setSensorCount();
+            server.setConnectedSensors();
+            server.setConnectedMonitoringStationsCount();
+        } catch (RemoteException ex) {
+            Logger.getLogger(Station.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        
     }
 
     @Override
@@ -101,4 +118,11 @@ public class Station extends UnicastRemoteObject implements StationRMI, Runnable
     public void setSensorList(ArrayList<String> list) throws RemoteException{
         stationInterface.getConnectedSensorsList().setListData(list.toArray());
     }
+
+    @Override
+    public void setMonitoringStationsCount(int count) throws RemoteException {
+        stationInterface.setConnectedMonitoringStations(count);
+    }
+    
+    
 }
