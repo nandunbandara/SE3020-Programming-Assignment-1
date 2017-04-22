@@ -5,7 +5,9 @@
  */
 package station;
 
+import java.awt.BorderLayout;
 import java.awt.Color;
+import java.awt.GridLayout;
 import server.ServerRMI;
 import java.rmi.*;
 import java.awt.Toolkit;
@@ -16,6 +18,13 @@ import java.rmi.server.UnicastRemoteObject;
 import java.util.ArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JOptionPane;
+import javax.swing.JPanel;
+import javax.swing.JPasswordField;
+import javax.swing.JTextField;
+import javax.swing.SwingConstants;
 import javax.swing.text.BadLocationException;
 import javax.swing.text.Document;
 import javax.swing.text.SimpleAttributeSet;
@@ -45,6 +54,26 @@ public class Station extends UnicastRemoteObject implements StationRMI, Runnable
             }
         }));
         
+        //login
+        JPanel panel = new JPanel(new BorderLayout(5, 5));
+        JFrame frame = new JFrame();
+        JPanel label = new JPanel(new GridLayout(0, 1, 2, 2));
+        label.add(new JLabel("Username", SwingConstants.RIGHT));
+        label.add(new JLabel("Password", SwingConstants.RIGHT));
+        panel.add(label, BorderLayout.WEST);
+
+        JPanel controls = new JPanel(new GridLayout(0, 1, 2, 2));
+        JTextField username = new JTextField();
+        controls.add(username);
+        JPasswordField password = new JPasswordField();
+        controls.add(password);
+        panel.add(controls, BorderLayout.CENTER);
+        
+        JOptionPane.showMessageDialog(frame, panel, "login", JOptionPane.OK_CANCEL_OPTION);
+        if(!(username.getText().equals("user"))&&(new String(password.getPassword()).equals("password"))){
+            System.exit(0);
+        }
+        //end login
         try{
             System.setSecurityManager(new RMISecurityManager());
             Registry reg = LocateRegistry.getRegistry("localhost",1009);

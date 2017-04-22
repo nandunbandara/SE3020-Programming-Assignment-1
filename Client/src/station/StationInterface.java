@@ -176,8 +176,7 @@ public class StationInterface extends javax.swing.JFrame{
             try{
                 for (String item : arr) {
                     JsonObject json = (JsonObject) parser.parse(item);
-                    System.out.println(json);
-                    dataset.addValue(json.get("value").getAsDouble(),"rainfall",json.get("datetime").getAsString());
+                    dataset.addValue(json.get("value").getAsDouble(),"data",json.get("datetime").getAsString());
                 }
             }catch(NullPointerException ex){
                 
@@ -191,7 +190,7 @@ public class StationInterface extends javax.swing.JFrame{
             }
             
             
-            JFreeChart chart = ChartFactory.createLineChart(null, "Time", "Rainfall", dataset, PlotOrientation.VERTICAL,
+            JFreeChart chart = ChartFactory.createLineChart(null, "Time", null, dataset, PlotOrientation.VERTICAL,
                     true,true,false);
             ChartPanel panel = new ChartPanel(chart);
             chartPanel.setLayout(new java.awt.BorderLayout());
