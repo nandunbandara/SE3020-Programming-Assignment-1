@@ -8,13 +8,8 @@ package station;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
 import java.awt.BorderLayout;
-import java.awt.Toolkit;
-import java.rmi.RemoteException;
 import java.util.ArrayList;
-import java.util.logging.Level;
-import java.util.logging.Logger;
-import javax.swing.text.BadLocationException;
-import javax.swing.text.Document;
+import java.util.Iterator;
 import org.jfree.chart.ChartFactory;
 import org.jfree.chart.ChartPanel;
 import org.jfree.chart.JFreeChart;
@@ -173,32 +168,36 @@ public class StationInterface extends javax.swing.JFrame{
 
     private void listSensorsValueChanged(javax.swing.event.ListSelectionEvent evt) {//GEN-FIRST:event_listSensorsValueChanged
         // TODO add your handling code here:
-        new Thread(new Runnable() {
-            @Override
-            public void run() {
-                JsonParser parser = new JsonParser();
-                ArrayList<String> arr = Station.getSensorReadings(listSensors.getSelectedValue());
-                
-                DefaultCategoryDataset dataset = new DefaultCategoryDataset( );
-                try{
-                    for(String item : arr){
-                        JsonObject json = (JsonObject) parser.parse(item);
-                        System.out.println(json);
-                        dataset.addValue(json.get("value").getAsDouble(),"rainfall",json.get("datetime").getAsString());
-                    }
-                }catch(NullPointerException ex){
-                    
+        new Thread(() -> {
+            JsonParser parser = new JsonParser();
+            ArrayList<String> arr = Station.getSensorReadings(listSensors.getSelectedValue());
+            
+            DefaultCategoryDataset dataset = new DefaultCategoryDataset( );
+            try{
+                for (String item : arr) {
+                    JsonObject json = (JsonObject) parser.parse(item);
+                    System.out.println(json);
+                    dataset.addValue(json.get("value").getAsDouble(),"rainfall",json.get("datetime").getAsString());
                 }
-                JsonObject json = (JsonObject) parser.parse(arr.get(arr.size()-1));
-                lblLatestReading.setText(json.get("value").getAsString()+" "+json.get("unit").getAsString());
-                JFreeChart chart = ChartFactory.createLineChart(null, "Time", "Rainfall", dataset, PlotOrientation.VERTICAL,
-         true,true,false);
-                ChartPanel panel = new ChartPanel(chart);
-                chartPanel.setLayout(new java.awt.BorderLayout());
-                panel.setPreferredSize( new java.awt.Dimension( 560 , 367 ) );
-                chartPanel.add(panel,BorderLayout.CENTER);
-                chartPanel.validate();
+            }catch(NullPointerException ex){
+                
             }
+            JsonObject json = new JsonObject();
+            try{
+                json = (JsonObject) parser.parse(arr.get(arr.size()-1));
+                lblLatestReading.setText(json.get("value").getAsString()+" "+json.get("unit").getAsString());
+            }catch(NullPointerException ne){
+                
+            }
+            
+            
+            JFreeChart chart = ChartFactory.createLineChart(null, "Time", "Rainfall", dataset, PlotOrientation.VERTICAL,
+                    true,true,false);
+            ChartPanel panel = new ChartPanel(chart);
+            chartPanel.setLayout(new java.awt.BorderLayout());
+            panel.setPreferredSize( new java.awt.Dimension( 560 , 367 ) );
+            chartPanel.add(panel,BorderLayout.CENTER);
+            chartPanel.validate();
         }).start();
     }//GEN-LAST:event_listSensorsValueChanged
 
@@ -230,10 +229,8 @@ public class StationInterface extends javax.swing.JFrame{
         //</editor-fold>
 
         /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new StationInterface().setVisible(true);
-            }
+        java.awt.EventQueue.invokeLater(() -> {
+            new StationInterface().setVisible(true);
         });
     }
 

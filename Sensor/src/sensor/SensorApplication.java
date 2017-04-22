@@ -10,6 +10,8 @@ import java.io.*;
 import java.util.*;
 import com.google.gson.*;
 import java.util.concurrent.TimeUnit;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 /**
  *
  * @author ntban_000
@@ -19,6 +21,15 @@ public class SensorApplication {
     private static ObjectOutputStream clientOut;
     private static Sensor sensor;
     public static void main(String[] args) throws InterruptedException, IOException{
+        Runtime.getRuntime().addShutdownHook(new Thread(new Runnable() {
+            public void run() {
+                try {
+                    clientOut.writeObject(new String[]{"CLOSE_"+sensor.getLocation()+"_"+getClass().getName()});
+                } catch (IOException ex) {
+                    System.out.println("Error closing the sensor");
+                }
+            }
+        }));
         System.out.print("Enter location: ");
         Scanner input = new Scanner(System.in);
         String location = input.nextLine();
@@ -53,7 +64,19 @@ public class SensorApplication {
         }
         
         System.out.println("Connected to server");
-        
+        new Thread(new Runnable(){
+            @Override
+            public void run() {
+                String code;
+                do{
+                System.out.println("Type 'exit' to stop the sensor");
+                code = new Scanner(System.in).nextLine();
+                if(code.equals("exit"))
+                    System.exit(0);
+                }while(!code.equals("exit"));
+            }
+            
+        }).start();
         String[] config = {location,type==1?"airepressure":(type==2?"humidity":"rainfall")};
         Random rand = new Random();
         Gson gson = new Gson();
@@ -77,8 +100,13 @@ public class SensorApplication {
                 }
             }
         }
-        clientOut.close();
-        clientSock.close();
+        try{
+            clientOut.close();
+            clientSock.close();
+        }catch(Exception e){
+            
+        }
+        
     }
 
 }

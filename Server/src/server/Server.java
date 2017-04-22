@@ -133,8 +133,8 @@ public class Server extends UnicastRemoteObject implements ServerRMI, Runnable{
             try {
                 station.setSensorList(sensors);
             } catch (RemoteException ex) {
-                Logger.getLogger(Server.class.getName()).log(Level.SEVERE, null, ex);
-            }
+                
+            } 
         }
     }
 
@@ -196,7 +196,11 @@ class SensorThread extends Thread{
             try {
                 String[] object = (String[]) input.readObject();
 //                System.out.println(object[0]);
-                if(object.length==2){
+                if(object.length==1){
+                    if(object[0].startsWith("CLOSE"))
+                        System.out.println(object[0]);
+                }
+                else if(object.length==2){
                     location = object[0];
                     type = object[1];
                     String sensor_name = location+"_"+type;
