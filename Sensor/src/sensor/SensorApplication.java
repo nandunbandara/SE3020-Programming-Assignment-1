@@ -20,11 +20,12 @@ public class SensorApplication {
     private static Socket clientSock;
     private static ObjectOutputStream clientOut;
     private static Sensor sensor;
+    private static int type;
     public static void main(String[] args) throws InterruptedException, IOException{
         Runtime.getRuntime().addShutdownHook(new Thread(new Runnable() {
             public void run() {
                 try {
-                    clientOut.writeObject(new String[]{"CLOSE_"+sensor.getLocation()+"_"+getClass().getName()});
+                    clientOut.writeObject(new String[]{"CLOSE_"+sensor.getLocation()+"_"+(type==1?"airpressure":(type==2?"humidity":"rainfall"))});
                 } catch (IOException ex) {
                     System.out.println("Error closing the sensor");
                 }
@@ -35,7 +36,7 @@ public class SensorApplication {
         String location = input.nextLine();
         System.out.println("Available Sensor Types:\n1.\tAir Pressure\n2.\tHumidity\n3.\tRainfall\n4.\tTemperature\n");
         System.out.print("Select type of sensor: ");
-        int type = input.nextInt();
+        type = input.nextInt();
         
         switch(type){
             case 1:

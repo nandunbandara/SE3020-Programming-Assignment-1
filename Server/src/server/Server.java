@@ -197,8 +197,12 @@ class SensorThread extends Thread{
                 String[] object = (String[]) input.readObject();
 //                System.out.println(object[0]);
                 if(object.length==1){
-                    if(object[0].startsWith("CLOSE"))
-                        System.out.println(object[0]);
+                    if(object[0].startsWith("CLOSE")){
+                        String sensor_name = object[0].split("_")[1]+"_"+object[0].split("_")[2];
+                        sensors.remove(sensor_name);
+                        Server.updateConnectedSensors();
+                        Server.updateConnectedSensorsCount();
+                    }    
                 }
                 else if(object.length==2){
                     location = object[0];
