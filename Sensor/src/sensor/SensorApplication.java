@@ -90,7 +90,7 @@ public class SensorApplication {
                     sensor.setValue(rand.nextDouble()*100);
                     String json = gson.toJson(sensor);
                     readings[i]=json;
-                    TimeUnit.MINUTES.sleep(5);
+                    TimeUnit.MINUTES.sleep(5);  
                 }
                 try{
                     clientOut.writeObject(readings);
