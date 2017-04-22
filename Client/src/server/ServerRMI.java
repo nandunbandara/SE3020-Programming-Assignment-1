@@ -6,6 +6,7 @@
 package server;
 
 import java.rmi.*;
+import java.util.ArrayList;
 import station.StationRMI;
 
 /**
@@ -18,4 +19,5 @@ public interface ServerRMI extends Remote{
     public void setConnectedSensors() throws RemoteException;
     public void setConnectedMonitoringStationsCount() throws RemoteException;
     public void removeMonitoringStation(StationRMI station) throws RemoteException;
+    public ArrayList<String> getSensorReadings(String sensor_name) throws RemoteException;
 }

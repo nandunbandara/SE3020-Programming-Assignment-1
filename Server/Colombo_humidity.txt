@@ -1,456 +1,504 @@
-{"location":"Colombo","type":"humidity","value":64.33318217483142,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":11.320712988688808,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":57.45018083438001,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":0.3109503234134059,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":11.760462031341401,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":39.677396895366215,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":95.1152924071645,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":19.256896809351577,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":97.22172219797949,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":88.16764820165952,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":65.48074479575845,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":96.9020895248914,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":64.33318217483142,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":11.320712988688808,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":57.45018083438001,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":0.3109503234134059,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":11.760462031341401,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":39.677396895366215,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":95.1152924071645,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":19.256896809351577,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":97.22172219797949,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":88.16764820165952,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":65.48074479575845,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":96.9020895248914,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":64.33318217483142,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":11.320712988688808,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":57.45018083438001,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":0.3109503234134059,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":11.760462031341401,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":39.677396895366215,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":95.1152924071645,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":19.256896809351577,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":97.22172219797949,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":88.16764820165952,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":65.48074479575845,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":96.9020895248914,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":64.33318217483142,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":11.320712988688808,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":57.45018083438001,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":0.3109503234134059,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":11.760462031341401,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":39.677396895366215,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":95.1152924071645,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":19.256896809351577,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":97.22172219797949,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":88.16764820165952,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":65.48074479575845,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":96.9020895248914,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":64.33318217483142,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":11.320712988688808,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":57.45018083438001,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":0.3109503234134059,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":11.760462031341401,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":39.677396895366215,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":95.1152924071645,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":19.256896809351577,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":97.22172219797949,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":88.16764820165952,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":65.48074479575845,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":96.9020895248914,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":64.33318217483142,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":11.320712988688808,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":57.45018083438001,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":0.3109503234134059,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":11.760462031341401,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":39.677396895366215,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":95.1152924071645,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":19.256896809351577,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":97.22172219797949,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":88.16764820165952,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":65.48074479575845,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":96.9020895248914,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":64.33318217483142,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":11.320712988688808,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":57.45018083438001,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":0.3109503234134059,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":11.760462031341401,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":39.677396895366215,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":95.1152924071645,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":19.256896809351577,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":97.22172219797949,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":88.16764820165952,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":65.48074479575845,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":96.9020895248914,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":64.33318217483142,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":11.320712988688808,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":57.45018083438001,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":0.3109503234134059,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":11.760462031341401,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":39.677396895366215,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":95.1152924071645,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":19.256896809351577,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":97.22172219797949,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":88.16764820165952,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":65.48074479575845,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":96.9020895248914,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":64.33318217483142,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":11.320712988688808,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":57.45018083438001,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":0.3109503234134059,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":11.760462031341401,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":39.677396895366215,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":95.1152924071645,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":19.256896809351577,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":97.22172219797949,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":88.16764820165952,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":65.48074479575845,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":96.9020895248914,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":64.33318217483142,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":11.320712988688808,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":57.45018083438001,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":0.3109503234134059,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":11.760462031341401,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":39.677396895366215,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":95.1152924071645,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":19.256896809351577,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":97.22172219797949,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":88.16764820165952,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":65.48074479575845,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":96.9020895248914,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":64.33318217483142,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":11.320712988688808,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":57.45018083438001,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":0.3109503234134059,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":11.760462031341401,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":39.677396895366215,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":95.1152924071645,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":19.256896809351577,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":97.22172219797949,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":88.16764820165952,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":65.48074479575845,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":96.9020895248914,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":64.33318217483142,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":11.320712988688808,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":57.45018083438001,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":0.3109503234134059,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":11.760462031341401,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":39.677396895366215,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":95.1152924071645,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":19.256896809351577,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":97.22172219797949,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":88.16764820165952,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":65.48074479575845,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":96.9020895248914,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":64.33318217483142,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":11.320712988688808,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":57.45018083438001,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":0.3109503234134059,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":11.760462031341401,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":39.677396895366215,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":95.1152924071645,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":19.256896809351577,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":97.22172219797949,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":88.16764820165952,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":65.48074479575845,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":96.9020895248914,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":64.33318217483142,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":11.320712988688808,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":57.45018083438001,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":0.3109503234134059,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":11.760462031341401,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":39.677396895366215,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":95.1152924071645,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":19.256896809351577,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":97.22172219797949,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":88.16764820165952,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":65.48074479575845,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":96.9020895248914,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":64.33318217483142,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":11.320712988688808,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":57.45018083438001,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":0.3109503234134059,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":11.760462031341401,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":39.677396895366215,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":95.1152924071645,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":19.256896809351577,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":97.22172219797949,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":88.16764820165952,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":65.48074479575845,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":96.9020895248914,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":64.33318217483142,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":11.320712988688808,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":57.45018083438001,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":0.3109503234134059,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":11.760462031341401,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":39.677396895366215,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":95.1152924071645,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":19.256896809351577,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":97.22172219797949,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":88.16764820165952,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":65.48074479575845,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":96.9020895248914,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":64.33318217483142,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":11.320712988688808,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":57.45018083438001,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":0.3109503234134059,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":11.760462031341401,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":39.677396895366215,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":95.1152924071645,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":19.256896809351577,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":97.22172219797949,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":88.16764820165952,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":65.48074479575845,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":96.9020895248914,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":64.33318217483142,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":11.320712988688808,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":57.45018083438001,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":0.3109503234134059,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":11.760462031341401,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":39.677396895366215,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":95.1152924071645,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":19.256896809351577,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":97.22172219797949,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":88.16764820165952,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":65.48074479575845,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":96.9020895248914,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":64.33318217483142,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":11.320712988688808,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":57.45018083438001,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":0.3109503234134059,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":11.760462031341401,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":39.677396895366215,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":95.1152924071645,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":19.256896809351577,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":97.22172219797949,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":88.16764820165952,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":65.48074479575845,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":96.9020895248914,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":64.33318217483142,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":11.320712988688808,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":57.45018083438001,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":0.3109503234134059,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":11.760462031341401,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":39.677396895366215,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":95.1152924071645,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":19.256896809351577,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":97.22172219797949,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":88.16764820165952,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":65.48074479575845,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":96.9020895248914,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":64.33318217483142,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":11.320712988688808,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":57.45018083438001,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":0.3109503234134059,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":11.760462031341401,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":39.677396895366215,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":95.1152924071645,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":19.256896809351577,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":97.22172219797949,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":88.16764820165952,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":65.48074479575845,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":96.9020895248914,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":64.33318217483142,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":11.320712988688808,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":57.45018083438001,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":0.3109503234134059,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":11.760462031341401,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":39.677396895366215,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":95.1152924071645,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":19.256896809351577,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":97.22172219797949,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":88.16764820165952,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":65.48074479575845,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":96.9020895248914,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":64.33318217483142,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":11.320712988688808,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":57.45018083438001,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":0.3109503234134059,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":11.760462031341401,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":39.677396895366215,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":95.1152924071645,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":19.256896809351577,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":97.22172219797949,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":88.16764820165952,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":65.48074479575845,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":96.9020895248914,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":64.33318217483142,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":11.320712988688808,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":57.45018083438001,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":0.3109503234134059,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":11.760462031341401,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":39.677396895366215,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":95.1152924071645,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":19.256896809351577,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":97.22172219797949,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":88.16764820165952,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":65.48074479575845,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":96.9020895248914,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":64.33318217483142,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":11.320712988688808,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":57.45018083438001,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":0.3109503234134059,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":11.760462031341401,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":39.677396895366215,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":95.1152924071645,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":19.256896809351577,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":97.22172219797949,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":88.16764820165952,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":65.48074479575845,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":96.9020895248914,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":64.33318217483142,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":11.320712988688808,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":57.45018083438001,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":0.3109503234134059,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":11.760462031341401,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":39.677396895366215,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":95.1152924071645,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":19.256896809351577,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":97.22172219797949,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":88.16764820165952,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":65.48074479575845,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":96.9020895248914,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":64.33318217483142,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":11.320712988688808,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":57.45018083438001,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":0.3109503234134059,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":11.760462031341401,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":39.677396895366215,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":95.1152924071645,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":19.256896809351577,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":97.22172219797949,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":88.16764820165952,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":65.48074479575845,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":96.9020895248914,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":64.33318217483142,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":11.320712988688808,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":57.45018083438001,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":0.3109503234134059,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":11.760462031341401,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":39.677396895366215,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":95.1152924071645,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":19.256896809351577,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":97.22172219797949,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":88.16764820165952,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":65.48074479575845,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":96.9020895248914,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":64.33318217483142,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":11.320712988688808,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":57.45018083438001,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":0.3109503234134059,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":11.760462031341401,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":39.677396895366215,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":95.1152924071645,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":19.256896809351577,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":97.22172219797949,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":88.16764820165952,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":65.48074479575845,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":96.9020895248914,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":64.33318217483142,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":11.320712988688808,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":57.45018083438001,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":0.3109503234134059,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":11.760462031341401,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":39.677396895366215,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":95.1152924071645,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":19.256896809351577,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":97.22172219797949,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":88.16764820165952,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":65.48074479575845,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":96.9020895248914,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":64.33318217483142,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":11.320712988688808,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":57.45018083438001,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":0.3109503234134059,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":11.760462031341401,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":39.677396895366215,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":95.1152924071645,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":19.256896809351577,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":97.22172219797949,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":88.16764820165952,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":65.48074479575845,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":96.9020895248914,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":64.33318217483142,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":11.320712988688808,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":57.45018083438001,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":0.3109503234134059,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":11.760462031341401,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":39.677396895366215,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":95.1152924071645,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":19.256896809351577,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":97.22172219797949,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":88.16764820165952,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":65.48074479575845,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":96.9020895248914,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":64.33318217483142,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":11.320712988688808,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":57.45018083438001,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":0.3109503234134059,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":11.760462031341401,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":39.677396895366215,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":95.1152924071645,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":19.256896809351577,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":97.22172219797949,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":88.16764820165952,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":65.48074479575845,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":96.9020895248914,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":64.33318217483142,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":11.320712988688808,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":57.45018083438001,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":0.3109503234134059,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":11.760462031341401,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":39.677396895366215,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":95.1152924071645,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":19.256896809351577,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":97.22172219797949,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":88.16764820165952,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":65.48074479575845,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":96.9020895248914,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":64.33318217483142,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":11.320712988688808,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":57.45018083438001,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":0.3109503234134059,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":11.760462031341401,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":39.677396895366215,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":95.1152924071645,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":19.256896809351577,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":97.22172219797949,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":88.16764820165952,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":65.48074479575845,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":96.9020895248914,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":35.14042446844673,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":32.26690616735861,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":18.92838191226337,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":65.0189604209338,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":32.65494843606073,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":4.797807752196737,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":83.82974568681446,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":72.00031995677841,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":19.399566185477124,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":31.180254980483234,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":66.6513967152479,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":6.840770561228926,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":35.14042446844673,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":32.26690616735861,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":18.92838191226337,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":65.0189604209338,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":32.65494843606073,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":4.797807752196737,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":83.82974568681446,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":72.00031995677841,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":19.399566185477124,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":31.180254980483234,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":66.6513967152479,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":6.840770561228926,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":35.14042446844673,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":32.26690616735861,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":18.92838191226337,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":65.0189604209338,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":32.65494843606073,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":4.797807752196737,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":83.82974568681446,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":72.00031995677841,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":19.399566185477124,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":31.180254980483234,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":66.6513967152479,"unit":"%"}
-{"location":"Colombo","type":"humidity","value":6.840770561228926,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":60.29139145053064,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":10.564638220930501,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":3.327224768366921,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":41.15974348014527,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":78.89941248861838,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":46.86039789585719,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":59.47473144300402,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":20.961931419829625,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":55.35936279634585,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":39.57736676839932,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":39.58743361201843,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":95.67046120438417,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":60.29139145053064,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":10.564638220930501,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":3.327224768366921,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":41.15974348014527,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":78.89941248861838,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":46.86039789585719,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":59.47473144300402,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":20.961931419829625,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":55.35936279634585,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":39.57736676839932,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":39.58743361201843,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":95.67046120438417,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":60.29139145053064,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":10.564638220930501,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":3.327224768366921,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":41.15974348014527,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":78.89941248861838,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":46.86039789585719,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":59.47473144300402,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":20.961931419829625,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":55.35936279634585,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":39.57736676839932,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":39.58743361201843,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":95.67046120438417,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":60.29139145053064,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":10.564638220930501,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":3.327224768366921,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":41.15974348014527,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":78.89941248861838,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":46.86039789585719,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":59.47473144300402,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":20.961931419829625,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":55.35936279634585,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":39.57736676839932,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":39.58743361201843,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":95.67046120438417,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":60.29139145053064,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":10.564638220930501,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":3.327224768366921,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":41.15974348014527,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":78.89941248861838,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":46.86039789585719,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":59.47473144300402,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":20.961931419829625,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":55.35936279634585,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":39.57736676839932,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":39.58743361201843,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":95.67046120438417,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":60.29139145053064,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":10.564638220930501,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":3.327224768366921,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":41.15974348014527,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":78.89941248861838,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":46.86039789585719,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":59.47473144300402,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":20.961931419829625,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":55.35936279634585,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":39.57736676839932,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":39.58743361201843,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":95.67046120438417,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":60.29139145053064,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":10.564638220930501,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":3.327224768366921,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":41.15974348014527,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":78.89941248861838,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":46.86039789585719,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":59.47473144300402,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":20.961931419829625,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":55.35936279634585,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":39.57736676839932,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":39.58743361201843,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":95.67046120438417,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":60.29139145053064,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":10.564638220930501,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":3.327224768366921,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":41.15974348014527,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":78.89941248861838,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":46.86039789585719,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":59.47473144300402,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":20.961931419829625,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":55.35936279634585,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":39.57736676839932,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":39.58743361201843,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":95.67046120438417,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":60.29139145053064,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":10.564638220930501,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":3.327224768366921,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":41.15974348014527,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":78.89941248861838,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":46.86039789585719,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":59.47473144300402,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":20.961931419829625,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":55.35936279634585,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":39.57736676839932,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":39.58743361201843,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":95.67046120438417,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":60.29139145053064,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":10.564638220930501,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":3.327224768366921,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":41.15974348014527,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":78.89941248861838,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":46.86039789585719,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":59.47473144300402,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":20.961931419829625,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":55.35936279634585,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":39.57736676839932,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":39.58743361201843,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":95.67046120438417,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":60.29139145053064,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":10.564638220930501,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":3.327224768366921,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":41.15974348014527,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":78.89941248861838,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":46.86039789585719,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":59.47473144300402,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":20.961931419829625,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":55.35936279634585,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":39.57736676839932,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":39.58743361201843,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":95.67046120438417,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":60.29139145053064,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":10.564638220930501,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":3.327224768366921,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":41.15974348014527,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":78.89941248861838,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":46.86039789585719,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":59.47473144300402,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":20.961931419829625,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":55.35936279634585,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":39.57736676839932,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":39.58743361201843,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":95.67046120438417,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":60.29139145053064,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":10.564638220930501,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":3.327224768366921,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":41.15974348014527,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":78.89941248861838,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":46.86039789585719,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":59.47473144300402,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":20.961931419829625,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":55.35936279634585,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":39.57736676839932,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":39.58743361201843,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":95.67046120438417,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":60.29139145053064,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":10.564638220930501,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":3.327224768366921,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":41.15974348014527,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":78.89941248861838,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":46.86039789585719,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":59.47473144300402,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":20.961931419829625,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":55.35936279634585,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":39.57736676839932,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":39.58743361201843,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":95.67046120438417,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":60.29139145053064,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":10.564638220930501,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":3.327224768366921,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":41.15974348014527,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":78.89941248861838,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":46.86039789585719,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":59.47473144300402,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":20.961931419829625,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":55.35936279634585,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":39.57736676839932,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":39.58743361201843,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":95.67046120438417,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":60.29139145053064,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":10.564638220930501,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":3.327224768366921,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":41.15974348014527,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":78.89941248861838,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":46.86039789585719,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":59.47473144300402,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":20.961931419829625,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":55.35936279634585,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":39.57736676839932,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":39.58743361201843,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":95.67046120438417,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":60.29139145053064,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":10.564638220930501,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":3.327224768366921,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":41.15974348014527,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":78.89941248861838,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":46.86039789585719,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":59.47473144300402,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":20.961931419829625,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":55.35936279634585,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":39.57736676839932,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":39.58743361201843,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":95.67046120438417,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":60.29139145053064,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":10.564638220930501,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":3.327224768366921,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":41.15974348014527,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":78.89941248861838,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":46.86039789585719,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":59.47473144300402,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":20.961931419829625,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":55.35936279634585,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":39.57736676839932,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":39.58743361201843,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":95.67046120438417,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":60.29139145053064,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":10.564638220930501,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":3.327224768366921,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":41.15974348014527,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":78.89941248861838,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":46.86039789585719,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":59.47473144300402,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":20.961931419829625,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":55.35936279634585,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":39.57736676839932,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":39.58743361201843,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":95.67046120438417,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":60.29139145053064,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":10.564638220930501,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":3.327224768366921,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":41.15974348014527,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":78.89941248861838,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":46.86039789585719,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":59.47473144300402,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":20.961931419829625,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":55.35936279634585,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":39.57736676839932,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":39.58743361201843,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":95.67046120438417,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":60.29139145053064,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":10.564638220930501,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":3.327224768366921,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":41.15974348014527,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":78.89941248861838,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":46.86039789585719,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":59.47473144300402,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":20.961931419829625,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":55.35936279634585,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":39.57736676839932,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":39.58743361201843,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":95.67046120438417,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":60.29139145053064,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":10.564638220930501,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":3.327224768366921,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":41.15974348014527,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":78.89941248861838,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":46.86039789585719,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":59.47473144300402,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":20.961931419829625,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":55.35936279634585,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":39.57736676839932,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":39.58743361201843,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":95.67046120438417,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":60.29139145053064,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":10.564638220930501,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":3.327224768366921,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":41.15974348014527,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":78.89941248861838,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":46.86039789585719,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":59.47473144300402,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":20.961931419829625,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":55.35936279634585,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":39.57736676839932,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":39.58743361201843,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":95.67046120438417,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":60.29139145053064,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":10.564638220930501,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":3.327224768366921,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":41.15974348014527,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":78.89941248861838,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":46.86039789585719,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":59.47473144300402,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":20.961931419829625,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":55.35936279634585,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":39.57736676839932,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":39.58743361201843,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":95.67046120438417,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":60.29139145053064,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":10.564638220930501,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":3.327224768366921,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":41.15974348014527,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":78.89941248861838,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":46.86039789585719,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":59.47473144300402,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":20.961931419829625,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":55.35936279634585,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":39.57736676839932,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":39.58743361201843,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":95.67046120438417,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":60.29139145053064,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":10.564638220930501,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":3.327224768366921,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":41.15974348014527,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":78.89941248861838,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":46.86039789585719,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":59.47473144300402,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":20.961931419829625,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":55.35936279634585,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":39.57736676839932,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":39.58743361201843,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":95.67046120438417,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":60.29139145053064,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":10.564638220930501,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":3.327224768366921,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":41.15974348014527,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":78.89941248861838,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":46.86039789585719,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":59.47473144300402,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":20.961931419829625,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":55.35936279634585,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":39.57736676839932,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":39.58743361201843,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":95.67046120438417,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":60.29139145053064,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":10.564638220930501,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":3.327224768366921,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":41.15974348014527,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":78.89941248861838,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":46.86039789585719,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":59.47473144300402,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":20.961931419829625,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":55.35936279634585,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":39.57736676839932,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":39.58743361201843,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":95.67046120438417,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":60.29139145053064,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":10.564638220930501,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":3.327224768366921,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":41.15974348014527,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":78.89941248861838,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":46.86039789585719,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":59.47473144300402,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":20.961931419829625,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":55.35936279634585,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":39.57736676839932,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":39.58743361201843,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":95.67046120438417,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":60.29139145053064,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":10.564638220930501,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":3.327224768366921,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":41.15974348014527,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":78.89941248861838,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":46.86039789585719,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":59.47473144300402,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":20.961931419829625,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":55.35936279634585,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":39.57736676839932,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":39.58743361201843,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":95.67046120438417,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":60.29139145053064,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":10.564638220930501,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":3.327224768366921,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":41.15974348014527,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":78.89941248861838,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":46.86039789585719,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":59.47473144300402,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":20.961931419829625,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":55.35936279634585,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":39.57736676839932,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":39.58743361201843,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":95.67046120438417,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":60.29139145053064,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":10.564638220930501,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":3.327224768366921,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":41.15974348014527,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":78.89941248861838,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":46.86039789585719,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":59.47473144300402,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":20.961931419829625,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":55.35936279634585,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":39.57736676839932,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":39.58743361201843,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":95.67046120438417,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":60.29139145053064,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":10.564638220930501,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":3.327224768366921,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":41.15974348014527,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":78.89941248861838,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":46.86039789585719,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":59.47473144300402,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":20.961931419829625,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":55.35936279634585,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":39.57736676839932,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":39.58743361201843,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":95.67046120438417,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":60.29139145053064,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":10.564638220930501,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":3.327224768366921,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":41.15974348014527,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":78.89941248861838,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":46.86039789585719,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":59.47473144300402,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":20.961931419829625,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":55.35936279634585,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":39.57736676839932,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":39.58743361201843,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":95.67046120438417,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":60.29139145053064,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":10.564638220930501,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":3.327224768366921,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":41.15974348014527,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":78.89941248861838,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":46.86039789585719,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":59.47473144300402,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":20.961931419829625,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":55.35936279634585,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":39.57736676839932,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":39.58743361201843,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":95.67046120438417,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":60.29139145053064,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":10.564638220930501,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":3.327224768366921,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":41.15974348014527,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":78.89941248861838,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":46.86039789585719,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":59.47473144300402,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":20.961931419829625,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":55.35936279634585,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":39.57736676839932,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":39.58743361201843,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":95.67046120438417,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":60.29139145053064,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":10.564638220930501,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":3.327224768366921,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":41.15974348014527,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":78.89941248861838,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":46.86039789585719,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":59.47473144300402,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":20.961931419829625,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":55.35936279634585,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":39.57736676839932,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":39.58743361201843,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":95.67046120438417,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":60.29139145053064,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":10.564638220930501,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":3.327224768366921,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":41.15974348014527,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":78.89941248861838,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":46.86039789585719,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":59.47473144300402,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":20.961931419829625,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":55.35936279634585,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":39.57736676839932,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":39.58743361201843,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":95.67046120438417,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":60.29139145053064,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":10.564638220930501,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":3.327224768366921,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":41.15974348014527,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":78.89941248861838,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":46.86039789585719,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":59.47473144300402,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":20.961931419829625,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":55.35936279634585,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":39.57736676839932,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":39.58743361201843,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":95.67046120438417,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":60.29139145053064,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":10.564638220930501,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":3.327224768366921,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":41.15974348014527,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":78.89941248861838,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":46.86039789585719,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":59.47473144300402,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":20.961931419829625,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":55.35936279634585,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":39.57736676839932,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":39.58743361201843,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":95.67046120438417,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":60.29139145053064,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":10.564638220930501,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":3.327224768366921,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":41.15974348014527,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":78.89941248861838,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":46.86039789585719,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":59.47473144300402,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":20.961931419829625,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":55.35936279634585,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":39.57736676839932,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":39.58743361201843,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":95.67046120438417,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":60.29139145053064,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":10.564638220930501,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":3.327224768366921,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":41.15974348014527,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":78.89941248861838,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":46.86039789585719,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":59.47473144300402,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":20.961931419829625,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":55.35936279634585,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":39.57736676839932,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":39.58743361201843,"unit":"%"}
+{"location":"colombo","type":"humidity","datetime":"22.04 03:14 PM","value":95.67046120438417,"unit":"%"}

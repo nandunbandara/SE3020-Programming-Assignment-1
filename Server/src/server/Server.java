@@ -92,6 +92,8 @@ public class Server extends UnicastRemoteObject implements ServerRMI, Runnable{
                 station.setSensorList(sensors);
             } catch (RemoteException ex) {
                 Logger.getLogger(Server.class.getName()).log(Level.SEVERE, null, ex);
+            } catch(NullPointerException ex){
+                
             }
         }
     }
@@ -103,6 +105,8 @@ public class Server extends UnicastRemoteObject implements ServerRMI, Runnable{
 //                  station.setConnectedSensors(4);
             }catch(RemoteException e){
                 System.out.println(e);
+            }catch(NullPointerException ex){
+                
             }
         }
     }
@@ -150,6 +154,19 @@ public class Server extends UnicastRemoteObject implements ServerRMI, Runnable{
         stations.remove(station);
         System.out.println("Station Disconnected");
         setConnectedMonitoringStationsCount();
+    }
+
+    @Override
+    public ArrayList<String> getSensorReadings(String sensor_name) throws RemoteException {
+        ArrayList<String> readings = new ArrayList<>();
+        try(BufferedReader br = new BufferedReader(new FileReader(sensor_name+".txt"))){
+            for(String line; (line=br.readLine())!=null;){
+                readings.add(line);
+            }
+        }catch(IOException ex){
+            return null;
+        }
+        return readings;
     }
 }
 //used to create seperate threads for each connected sensor

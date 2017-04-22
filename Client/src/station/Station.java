@@ -6,11 +6,9 @@
 package station;
 
 import java.awt.Color;
-import static java.awt.Color.red;
 import server.ServerRMI;
 import java.rmi.*;
 import java.awt.Toolkit;
-import java.net.MalformedURLException;
 import java.rmi.RemoteException;
 import java.rmi.registry.LocateRegistry;
 import java.rmi.registry.Registry;
@@ -41,19 +39,27 @@ public class Station extends UnicastRemoteObject implements StationRMI, Runnable
                     server.removeMonitoringStation(station);
                 } catch (RemoteException ex) {
                     Logger.getLogger(Station.class.getName()).log(Level.SEVERE, null, ex);
+                } catch(NullPointerException e){
+                    
                 }
             }
         }));
+        
         try{
             System.setSecurityManager(new RMISecurityManager());
             Registry reg = LocateRegistry.getRegistry("localhost",1009);
             server = (ServerRMI) reg.lookup("server");
 //            ServerRMI server = (ServerRMI) Naming.lookup("rmi://localhost:1009/server");
+            
             station = new Station();
             server.addStation(station);
             station.run();
-        }catch(Exception e){
-            e.printStackTrace();
+        }catch(ConnectException e){
+            javax.swing.JOptionPane.showMessageDialog(stationInterface, "Server is not running!");
+        }catch(RemoteException e){
+            javax.swing.JOptionPane.showMessageDialog(stationInterface, e);
+        }catch(NotBoundException e){
+            javax.swing.JOptionPane.showConfirmDialog(stationInterface, e);
         }
     }
     @Override
@@ -124,5 +130,13 @@ public class Station extends UnicastRemoteObject implements StationRMI, Runnable
         stationInterface.setConnectedMonitoringStations(count);
     }
     
+    public static ArrayList<String> getSensorReadings(String name){
+        try {
+            return server.getSensorReadings(name);
+        } catch (RemoteException ex) {
+            javax.swing.JOptionPane.showMessageDialog(stationInterface, "Error reading from server!");
+        }
+        return null;
+    }
     
 }

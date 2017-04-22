@@ -5,6 +5,10 @@
  */
 package sensor;
 
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 /**
  *
  * @author ntban_000
@@ -12,6 +16,7 @@ package sensor;
 public class Sensor{
     private String location;
     private String type;
+    private String datetime;
     private double value;
     private String unit;
     
@@ -36,6 +41,9 @@ public class Sensor{
     
     public void setValue(double value){
         this.value = value;
+        DateFormat dateFormat = new SimpleDateFormat("dd.MM hh:mm a");
+        Date date = new Date();
+        this.datetime = dateFormat.format(date);
     }
     
     public double getValue(){
