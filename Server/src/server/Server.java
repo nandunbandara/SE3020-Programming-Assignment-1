@@ -202,14 +202,19 @@ class SensorThread extends Thread{
                         sensors.remove(sensor_name);
                         Server.updateConnectedSensors();
                         Server.updateConnectedSensorsCount();
+                        for(StationRMI station : Server.stations)
+                            station.alert("Sensor disconnected: "+location+"_"+type+"\n");
                     }    
                 }
                 else if(object.length==2){
                     location = object[0];
                     type = object[1];
                     String sensor_name = location+"_"+type;
-                    if(!sensors.contains(sensor_name))
+                    if(!sensors.contains(sensor_name)){
                         sensors.add(sensor_name);
+                        for(StationRMI station : Server.stations)
+                            station.addLog("Sensor connected: "+location+"_"+type);
+                    }
                 }else{
                     //write to file
                     for(int i=0;i<object.length;i++){

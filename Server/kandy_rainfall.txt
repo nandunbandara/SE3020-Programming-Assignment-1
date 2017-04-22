@@ -2148,3 +2148,15 @@
 {"location":"Kandy","type":"rainfall","datetime":"22.04 09:32 PM","value":92.38009842535455,"unit":"mm"}
 {"location":"Kandy","type":"rainfall","datetime":"22.04 09:32 PM","value":7.853101418674912,"unit":"mm"}
 {"location":"Kandy","type":"rainfall","datetime":"22.04 09:32 PM","value":13.734932038394287,"unit":"mm"}
+{"location":"Kandy","type":"rainfall","datetime":"23.04 12:07 AM","value":53.03490846372362,"unit":"mm"}
+{"location":"Kandy","type":"rainfall","datetime":"23.04 12:07 AM","value":21.324971719595254,"unit":"mm"}
+{"location":"Kandy","type":"rainfall","datetime":"23.04 12:07 AM","value":74.66112787261477,"unit":"mm"}
+{"location":"Kandy","type":"rainfall","datetime":"23.04 12:07 AM","value":12.260720669448745,"unit":"mm"}
+{"location":"Kandy","type":"rainfall","datetime":"23.04 12:07 AM","value":17.69606001845515,"unit":"mm"}
+{"location":"Kandy","type":"rainfall","datetime":"23.04 12:07 AM","value":20.668409707400382,"unit":"mm"}
+{"location":"Kandy","type":"rainfall","datetime":"23.04 12:07 AM","value":95.67225600775826,"unit":"mm"}
+{"location":"Kandy","type":"rainfall","datetime":"23.04 12:07 AM","value":25.51989873529251,"unit":"mm"}
+{"location":"Kandy","type":"rainfall","datetime":"23.04 12:07 AM","value":83.58666900002936,"unit":"mm"}
+{"location":"Kandy","type":"rainfall","datetime":"23.04 12:07 AM","value":8.093275673113565,"unit":"mm"}
+{"location":"Kandy","type":"rainfall","datetime":"23.04 12:07 AM","value":89.20782744026404,"unit":"mm"}
+{"location":"Kandy","type":"rainfall","datetime":"23.04 12:07 AM","value":58.8630782447253,"unit":"mm"}

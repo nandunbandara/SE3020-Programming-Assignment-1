@@ -78,7 +78,7 @@ public class SensorApplication {
             }
             
         }).start();
-        String[] config = {location,type==1?"airpressure":(type==2?"humidity":"rainfall")};
+        String[] config = {location,type==1?"airpressure":(type==2?"humidity":(type==3?"rainfall":"temperature"))};
         Random rand = new Random();
         Gson gson = new Gson();
         int count = 0;
