@@ -39,6 +39,7 @@ public class Sensor{
         return type;
     }
     
+    //set the reading value and the date time
     public void setValue(double value){
         this.value = value;
         DateFormat dateFormat = new SimpleDateFormat("dd.MM hh:mm a");

@@ -55,11 +55,14 @@ public class StationInterface extends javax.swing.JFrame{
         lblLatestReading = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setUndecorated(true);
 
         jPanel1.setBackground(new java.awt.Color(210, 215, 211));
 
         jLabel1.setText("Connected Sensors: ");
 
+        listSensors.setBackground(java.awt.SystemColor.control);
+        listSensors.setOpaque(false);
         listSensors.addListSelectionListener(new javax.swing.event.ListSelectionListener() {
             public void valueChanged(javax.swing.event.ListSelectionEvent evt) {
                 listSensorsValueChanged(evt);
@@ -75,6 +78,7 @@ public class StationInterface extends javax.swing.JFrame{
         });
 
         txtLog.setEditable(false);
+        txtLog.setOpaque(false);
         jScrollPane3.setViewportView(txtLog);
 
         lblConnectedSensors.setText("0");
@@ -83,11 +87,13 @@ public class StationInterface extends javax.swing.JFrame{
 
         lblConnectedMonitoringStations.setText("0");
 
+        chartPanel.setOpaque(false);
+
         javax.swing.GroupLayout chartPanelLayout = new javax.swing.GroupLayout(chartPanel);
         chartPanel.setLayout(chartPanelLayout);
         chartPanelLayout.setHorizontalGroup(
             chartPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
+            .addGap(0, 481, Short.MAX_VALUE)
         );
         chartPanelLayout.setVerticalGroup(
             chartPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)

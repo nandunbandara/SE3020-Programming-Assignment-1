@@ -42,6 +42,7 @@ public class Station extends UnicastRemoteObject implements StationRMI, Runnable
     }
     
     public static void main(String[] args){
+        //Remove monitoring station from the server's record on exit
         Runtime.getRuntime().addShutdownHook(new Thread(new Runnable() {
             public void run() {
                 try {
@@ -54,7 +55,7 @@ public class Station extends UnicastRemoteObject implements StationRMI, Runnable
             }
         }));
         
-        //login
+        //Login Popup
         JPanel panel = new JPanel(new BorderLayout(5, 5));
         JFrame frame = new JFrame();
         JPanel label = new JPanel(new GridLayout(0, 1, 2, 2));
@@ -74,6 +75,8 @@ public class Station extends UnicastRemoteObject implements StationRMI, Runnable
             System.exit(0);
         }
         //end login
+        
+        //Locate Registry and connect
         try{
             System.setSecurityManager(new RMISecurityManager());
             Registry reg = LocateRegistry.getRegistry("localhost",1009);
@@ -94,6 +97,8 @@ public class Station extends UnicastRemoteObject implements StationRMI, Runnable
             System.exit(0);
         }
     }
+    
+    //Alerts from sensors method
     @Override
     public void alert(String alertText) throws RemoteException {
         Toolkit.getDefaultToolkit().beep();
@@ -110,6 +115,7 @@ public class Station extends UnicastRemoteObject implements StationRMI, Runnable
         stationInterface.getTextPane().setCaretPosition(doc.getLength());
     }
 
+    //Logging sensors
     @Override
     public void addLog(String logText) throws RemoteException {
         Document doc = stationInterface.getTextPane().getDocument();
