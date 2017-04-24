@@ -182,6 +182,7 @@ public class StationInterface extends javax.swing.JFrame{
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    //display chart with sensor readings when a sensor is selected
     private void listSensorsValueChanged(javax.swing.event.ListSelectionEvent evt) {//GEN-FIRST:event_listSensorsValueChanged
         // TODO add your handling code here:
         new Thread(() -> {
