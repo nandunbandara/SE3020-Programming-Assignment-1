@@ -10,6 +10,7 @@ import com.google.gson.JsonParser;
 import java.awt.BorderLayout;
 import java.util.ArrayList;
 import java.util.Iterator;
+import javax.swing.JOptionPane;
 import org.jfree.chart.ChartFactory;
 import org.jfree.chart.ChartPanel;
 import org.jfree.chart.JFreeChart;
@@ -57,7 +58,7 @@ public class StationInterface extends javax.swing.JFrame{
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
 
-        jPanel1.setBackground(new java.awt.Color(210, 215, 211));
+        jPanel1.setBackground(new java.awt.Color(77, 143, 172));
 
         jLabel1.setText("Connected Sensors: ");
 
@@ -217,7 +218,11 @@ public class StationInterface extends javax.swing.JFrame{
 
     private void btnLogoutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLogoutActionPerformed
         // TODO add your handling code here:
-        System.exit(0);
+        
+        int result = JOptionPane.showConfirmDialog(rootPane, "Do you want to exit?","Exit", JOptionPane.YES_NO_OPTION );
+        if(result==JOptionPane.YES_OPTION){
+            System.exit(0);
+        }
     }//GEN-LAST:event_btnLogoutActionPerformed
 
     /**
