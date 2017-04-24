@@ -19,6 +19,7 @@ import java.rmi.server.UnicastRemoteObject;
 import java.util.*;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import security.AESEncryption;
 /**
  *
  * @author ntban_000
@@ -28,6 +29,8 @@ public class Server extends UnicastRemoteObject implements ServerRMI, Runnable{
     public static ArrayList<StationRMI> stations;
     public static ArrayList<String> sensors; 
     public static HashMap<String, SensorThread> sensorThreads;
+    private static FileWriter fileOutput;
+
     public Server() throws RemoteException{
         
     }
@@ -47,7 +50,17 @@ public class Server extends UnicastRemoteObject implements ServerRMI, Runnable{
         } catch (RemoteException ex) {
             System.out.println("Monitor station disconnected");
         }
-        
+        new Thread(new Runnable(){
+            @Override
+            public void run() {
+               String input = new Scanner(System.in).nextLine();
+               if(input.startsWith("@add")){
+                   String uname = input.split(" ")[1];
+                   String pwd = input.split(" ")[2];
+                   addUser(uname, pwd);
+               }
+            }
+        }).start();
     }
 
     @Override
@@ -138,7 +151,6 @@ public class Server extends UnicastRemoteObject implements ServerRMI, Runnable{
             try {
                 station.setMonitoringStationsCount(stations.size());
             } catch (RemoteException ex) {
-                Logger.getLogger(Server.class.getName()).log(Level.SEVERE, null, ex);
             }
         }
     }
@@ -161,6 +173,25 @@ public class Server extends UnicastRemoteObject implements ServerRMI, Runnable{
             return null;
         }
         return readings;
+    }
+
+    @Override
+    public boolean authenticateUser(String uname, String pwd) throws RemoteException {
+//        AESEncryption.decrypt(pwd);
+        return true;
+    }
+    
+    private static void addUser(String uname, String pwd){
+        try {
+            String encryptedUName = AESEncryption.encrypt(uname);
+            String encryptedPwd = AESEncryption.encrypt(pwd);
+            fileOutput = new FileWriter("users.conf",true);
+            fileOutput.write("#user "+encryptedUName+" "+encryptedPwd+"\n");
+            System.out.println("User added: uname");
+            fileOutput.close();
+        } catch (Exception ex) {
+            System.out.println("Error: Can not add user" + ex);
+        }
     }
 }
 //used to create seperate threads for each connected sensor

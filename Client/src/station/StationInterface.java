@@ -60,9 +60,10 @@ public class StationInterface extends javax.swing.JFrame{
 
         jPanel1.setBackground(new java.awt.Color(77, 143, 172));
 
-        jLabel1.setText("Connected Sensors: ");
+        jLabel1.setText("Active Sensors: ");
 
         listSensors.setBackground(java.awt.SystemColor.control);
+        listSensors.setToolTipText("Shows the names of active sensors\nFormat: <Location>_<Type of Sensor>");
         listSensors.setOpaque(false);
         listSensors.addListSelectionListener(new javax.swing.event.ListSelectionListener() {
             public void valueChanged(javax.swing.event.ListSelectionEvent evt) {
@@ -79,14 +80,17 @@ public class StationInterface extends javax.swing.JFrame{
         });
 
         txtLog.setEditable(false);
+        txtLog.setToolTipText("Console : Shows alerts and logs");
         txtLog.setOpaque(false);
         jScrollPane3.setViewportView(txtLog);
 
         lblConnectedSensors.setText("0");
+        lblConnectedSensors.setToolTipText("Number of active sensors");
 
         jLabel2.setText("Connected Monitoring Stations: ");
 
         lblConnectedMonitoringStations.setText("0");
+        lblConnectedMonitoringStations.setToolTipText("The number of connected Monitoring Stations");
 
         chartPanel.setOpaque(false);
 
@@ -98,12 +102,13 @@ public class StationInterface extends javax.swing.JFrame{
         );
         chartPanelLayout.setVerticalGroup(
             chartPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 187, Short.MAX_VALUE)
+            .addGap(0, 209, Short.MAX_VALUE)
         );
 
         jLabel3.setText("Latest Reading: ");
 
         lblLatestReading.setText("0");
+        lblLatestReading.setToolTipText("Latest reading from the selected sensor");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -114,31 +119,24 @@ public class StationInterface extends javax.swing.JFrame{
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 136, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jScrollPane3)
-                                    .addComponent(chartPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGap(26, 26, 26)
-                                .addComponent(jLabel3)
-                                .addGap(0, 0, Short.MAX_VALUE))))
+                            .addComponent(jScrollPane3)
+                            .addComponent(chartPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(jLabel1)
                         .addGap(6, 6, 6)
                         .addComponent(lblConnectedSensors)
-                        .addGap(30, 30, 30)
+                        .addGap(34, 34, 34)
                         .addComponent(jLabel2)
-                        .addGap(10, 10, 10)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(lblLatestReading)
-                                .addGap(0, 0, Short.MAX_VALUE))
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(lblConnectedMonitoringStations)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 260, Short.MAX_VALUE)
-                                .addComponent(btnLogout)))))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(lblConnectedMonitoringStations)
+                        .addGap(18, 18, 18)
+                        .addComponent(jLabel3)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(lblLatestReading, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(btnLogout)))
                 .addContainerGap())
         );
         jPanel1Layout.setVerticalGroup(
@@ -152,15 +150,14 @@ public class StationInterface extends javax.swing.JFrame{
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel1)
                             .addComponent(lblConnectedSensors)
-                            .addComponent(jLabel2)
-                            .addComponent(lblConnectedMonitoringStations))))
+                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                .addComponent(lblConnectedMonitoringStations)
+                                .addComponent(jLabel2)
+                                .addComponent(jLabel3)
+                                .addComponent(lblLatestReading)))))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel3)
-                            .addComponent(lblLatestReading))
-                        .addGap(8, 8, 8)
                         .addComponent(chartPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jScrollPane3, javax.swing.GroupLayout.DEFAULT_SIZE, 103, Short.MAX_VALUE))

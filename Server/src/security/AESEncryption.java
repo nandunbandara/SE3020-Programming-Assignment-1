@@ -16,7 +16,7 @@ import sun.misc.*;
  */
 public class AESEncryption {
     private static final String ALG = "AES";
-    private static final byte[] secretKey = new byte[]{'h','f',4,'R','y','z','O','J','h',5};
+    private static final byte[] KEY = new byte[]{'h','f',4,'R','y','z','O','J','h',5,'g','w','W','r','a','z'};
     
     public static String encrypt(String data) throws Exception{
         Key key = generateKey();
@@ -36,7 +36,7 @@ public class AESEncryption {
     }
     
     private static Key generateKey(){
-        Key key = new SecretKeySpec(secretKey, ALG);
+        Key key = new SecretKeySpec(KEY, ALG);
         return key;
     }
 }
