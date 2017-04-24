@@ -177,10 +177,35 @@ public class Server extends UnicastRemoteObject implements ServerRMI, Runnable{
 
     @Override
     public boolean authenticateUser(String uname, String pwd) throws RemoteException {
-//        AESEncryption.decrypt(pwd);
-        return true;
+        String encrypted_uname_check;
+        String encrypted_pwd_check;
+        try {
+            encrypted_uname_check = AESEncryption.encrypt(uname);
+            encrypted_pwd_check = AESEncryption.encrypt(pwd);
+        } catch (Exception ex) {
+            System.out.println("Error: "+ex);
+            return false;
+        }
+        
+        try(BufferedReader input = new BufferedReader(new FileReader("users.conf"))){
+            for(String inputLine; (inputLine=input.readLine())!=null;){
+                if(inputLine.startsWith("#user")&&inputLine.split(" ")[1].equals(encrypted_uname_check)){
+                    if(inputLine.split(" ")[2].equals(encrypted_pwd_check)){
+                        System.out.println("User authenticated: "+uname);
+                        return true;
+                    }
+                    else
+                        return false;
+                }
+            }
+        }catch(Exception ex){
+            System.out.println("Error: "+ex);
+            return false;
+        }
+        return false;
     }
     
+    //Add new user for monitoring stations
     private static void addUser(String uname, String pwd){
         try {
             String encryptedUName = AESEncryption.encrypt(uname);

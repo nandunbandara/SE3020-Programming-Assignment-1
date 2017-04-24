@@ -55,6 +55,26 @@ public class Station extends UnicastRemoteObject implements StationRMI, Runnable
             }
         }));
         
+        
+        
+        //Locate Registry and connect
+        try{
+            System.setSecurityManager(new RMISecurityManager());
+            Registry reg = LocateRegistry.getRegistry("localhost",1009);
+            server = (ServerRMI) reg.lookup("server");
+            station = new Station();
+            
+        }catch(ConnectException e){
+            javax.swing.JOptionPane.showMessageDialog(stationInterface, "Server is not running!");
+            System.exit(0);
+        }catch(RemoteException e){
+            javax.swing.JOptionPane.showMessageDialog(stationInterface, e);
+            System.exit(0);
+        }catch(NotBoundException e){
+            javax.swing.JOptionPane.showConfirmDialog(stationInterface, e);
+            System.exit(0);
+        }
+        
         //Login Popup
         JPanel panel = new JPanel(new BorderLayout(5, 5));
         JFrame frame = new JFrame();
@@ -71,29 +91,17 @@ public class Station extends UnicastRemoteObject implements StationRMI, Runnable
         panel.add(controls, BorderLayout.CENTER);
         
         JOptionPane.showMessageDialog(frame, panel, "login", JOptionPane.OK_CANCEL_OPTION);
-        if(!(username.getText().equals("user"))&&!(new String(password.getPassword()).equals("password"))){
-            System.exit(0);
-        }
-        //end login
-        
-        //Locate Registry and connect
-        try{
-            System.setSecurityManager(new RMISecurityManager());
-            Registry reg = LocateRegistry.getRegistry("localhost",1009);
-            server = (ServerRMI) reg.lookup("server");
-
-            
-            station = new Station();
-            server.addStation(station);
-            station.run();
-        }catch(ConnectException e){
-            javax.swing.JOptionPane.showMessageDialog(stationInterface, "Server is not running!");
-            System.exit(0);
-        }catch(RemoteException e){
-            javax.swing.JOptionPane.showMessageDialog(stationInterface, e);
-            System.exit(0);
-        }catch(NotBoundException e){
-            javax.swing.JOptionPane.showConfirmDialog(stationInterface, e);
+        try {
+            if(!server.authenticateUser(username.getText(), password.getText())){
+                JOptionPane.showMessageDialog(panel, "Could not validate user: "+username.getText());
+                System.exit(0);
+            }else{
+                server.addStation(station);
+                station.run();
+            }
+            //end login
+        } catch (RemoteException ex) {
+            JOptionPane.showMessageDialog(panel, "Could not validate user: "+username.getText());
             System.exit(0);
         }
     }
