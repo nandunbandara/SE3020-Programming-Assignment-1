@@ -218,6 +218,11 @@ public class Server extends UnicastRemoteObject implements ServerRMI, Runnable{
             System.out.println("Error: Can not add user" + ex);
         }
     }
+    
+    //Remove user
+    private static void removeUser(String uname){
+        
+    }
 }
 //used to create seperate threads for each connected sensor
 class SensorThread extends Thread{
