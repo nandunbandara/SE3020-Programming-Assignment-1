@@ -45,13 +45,13 @@ public class Server extends UnicastRemoteObject implements ServerRMI, Runnable{
                     this.rmi_port = Integer.parseInt(input.split(" ")[1]);
                 }else{
                     //set default configurations
-                    this.server_com_port=9999;
+                    this.server_com_port=6666;
                     this.rmi_port=1099;
                 }
             }
         }catch(Exception e){
             //set default configurations
-            this.server_com_port=9999;
+            this.server_com_port=6666;
             this.rmi_port=1099;
         }
         //display loaded configurations

@@ -11,6 +11,8 @@ import java.awt.GridLayout;
 import server.ServerRMI;
 import java.rmi.*;
 import java.awt.Toolkit;
+import java.io.BufferedReader;
+import java.io.FileReader;
 import java.rmi.RemoteException;
 import java.rmi.registry.LocateRegistry;
 import java.rmi.registry.Registry;
@@ -39,9 +41,33 @@ public class Station extends UnicastRemoteObject implements StationRMI, Runnable
     private static StationInterface stationInterface;
     private static ServerRMI server;
     private static Station station;
-
+    private static String rmi_host;
+    private static int rmi_port;
+    
     public Station() throws RemoteException {
-        
+        System.out.println("Loading configurations...");
+        try(BufferedReader bf = new BufferedReader(new FileReader("station.conf"))){
+            for(String input; (input=bf.readLine())!=null;){
+                if(input.startsWith("@rmi_port")){
+                    //set port for socket communication
+                   rmi_port = Integer.parseInt(input.split(" ")[1]);
+                }else if (input.startsWith("@rmi_host")){
+                    //set host
+                    rmi_host = input.split(" ")[1];
+                }
+                else{
+                    //set default configurations
+                   rmi_port=1099;
+                   rmi_host="localhost";
+                }
+            }
+        }catch(Exception e){
+             //set default configurations
+             rmi_port=1099;
+             rmi_host="localhost";
+        }
+        //display loaded configurations
+        System.out.println("RMI: "+rmi_host+":"+rmi_port);
     }
     
     public static void main(String[] args) {
@@ -61,9 +87,9 @@ public class Station extends UnicastRemoteObject implements StationRMI, Runnable
         //Locate Registry and connect
         try {
             System.setSecurityManager(new RMISecurityManager());
-            Registry reg = LocateRegistry.getRegistry("localhost", 1099);
-            server = (ServerRMI) reg.lookup("server");
             station = new Station();
+            Registry reg = LocateRegistry.getRegistry(rmi_host, rmi_port);
+            server = (ServerRMI) reg.lookup("server");
         } catch (ConnectException e) {
             javax.swing.JOptionPane.showMessageDialog(stationInterface, "Server is not running!"+e);
             System.exit(0);

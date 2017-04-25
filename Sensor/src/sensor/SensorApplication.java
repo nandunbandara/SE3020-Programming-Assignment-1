@@ -20,6 +20,9 @@ public class SensorApplication {
     private static ObjectOutputStream clientOut;
     private static Sensor sensor;
     private static int type;
+    private static int sensor_com_port;
+    private static String server;
+    
     public static void main(String[] args) throws InterruptedException, IOException{
         //remove the client from server records on exit
         Runtime.getRuntime().addShutdownHook(new Thread(new Runnable() {
@@ -28,9 +31,38 @@ public class SensorApplication {
                     clientOut.writeObject(new String[]{"CLOSE_"+sensor.getLocation()+"_"+(type==1?"airpressure":(type==2?"humidity":"rainfall"))});
                 } catch (IOException ex) {
                     System.out.println("Error closing the sensor");
+                } catch(NullPointerException ne){
+                    
                 }
             }
         }));
+        
+        //load configurations
+        System.out.println("Loading configurations...");
+        try(BufferedReader bf = new BufferedReader(new FileReader("sensor.conf"))){
+            for(String input; (input=bf.readLine())!=null;){
+                if(input.startsWith("@sensor_com")){
+                    //set port for socket communication
+                   sensor_com_port = Integer.parseInt(input.split(" ")[1]);
+                }else if (input.startsWith("@server")){
+                    //set host
+                    server = input.split(" ")[1];
+                }
+                else{
+                    //set default configurations
+                   sensor_com_port=9999;
+                   server="localhost";
+                }
+            }
+        }catch(Exception e){
+             //set default configurations
+             sensor_com_port=9999;
+             server="localhost";
+        }
+        //display loaded configurations
+        System.out.println("Server: "+server+":"+sensor_com_port);
+        
+        
         //prompt user for location and the type of sensor
         System.out.print("Enter location: ");
         Scanner input = new Scanner(System.in);
@@ -60,10 +92,11 @@ public class SensorApplication {
         
         //create socket and object streaming object for client communications
         try{
-            clientSock = new Socket("127.0.0.1",6666);
+            clientSock = new Socket(server,sensor_com_port);
             clientOut = new ObjectOutputStream(clientSock.getOutputStream());
         }catch(Exception ex){
-            ex.printStackTrace();
+            System.out.println("Error: Can not connect to the server");
+            System.exit(1);
         }
         
         System.out.println("Connected to server");
@@ -76,8 +109,10 @@ public class SensorApplication {
                 do{
                 System.out.println("Type 'exit' to stop the sensor");
                 code = new Scanner(System.in).nextLine();
-                if(code.equals("exit"))
+                if(code.equals("exit")){
+                    System.out.println("Sensor shutting down...");
                     System.exit(0);
+                }
                 }while(!code.equals("exit"));
             }
             
@@ -92,11 +127,12 @@ public class SensorApplication {
         if(clientSock != null && clientOut != null){
             while(true){
                 clientOut.writeObject(config);
+                //set random readings every 5 mins
                 for(int i=0;i<12;i++){
+                    TimeUnit.MINUTES.sleep(5); 
                     sensor.setValue(rand.nextDouble()*100);
                     String json = gson.toJson(sensor);
-                    readings[i]=json;
-                    TimeUnit.MINUTES.sleep(5);  
+                    readings[i]=json; 
                 }
                 try{
                     clientOut.writeObject(readings);
@@ -107,6 +143,7 @@ public class SensorApplication {
             }
         }
         try{
+            //close the client socket and write object
             clientOut.close();
             clientSock.close();
         }catch(Exception e){
