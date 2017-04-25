@@ -30,9 +30,33 @@ public class Server extends UnicastRemoteObject implements ServerRMI, Runnable{
     public static ArrayList<String> sensors; 
     public static HashMap<String, SensorThread> sensorThreads;
     private static FileWriter fileOutput;
-
+    private int server_com_port;
+    private static int rmi_port;
     public Server() throws RemoteException{
-        
+        //load configurations
+        System.out.println("Loading configurations...");
+        try(BufferedReader bf = new BufferedReader(new FileReader("server.conf"))){
+            for(String input; (input=bf.readLine())!=null;){
+                if(input.startsWith("@server_com")){
+                    //set port for socket communication
+                   this.server_com_port = Integer.parseInt(input.split(" ")[1]);
+                }else if(input.startsWith("@rmi_port")){
+                    //set port for rmi
+                    this.rmi_port = Integer.parseInt(input.split(" ")[1]);
+                }else{
+                    //set default configurations
+                    this.server_com_port=9999;
+                    this.rmi_port=1099;
+                }
+            }
+        }catch(Exception e){
+            //set default configurations
+            this.server_com_port=9999;
+            this.rmi_port=1099;
+        }
+        //display loaded configurations
+        System.out.println("Socket communication port: "+server_com_port);
+        System.out.println("RMI port: "+rmi_port);
     }
     
     public static void main(String[] args) throws RemoteException{
@@ -42,25 +66,31 @@ public class Server extends UnicastRemoteObject implements ServerRMI, Runnable{
         sensorThreads = new HashMap<>();
         
         try {
-            Registry reg = LocateRegistry.createRegistry(1099);
+            Registry reg = LocateRegistry.createRegistry(rmi_port);
             Server server = new Server();
             reg.rebind("server",server);
             Thread thread = new Thread(server);
             thread.start();
         } catch (RemoteException ex) {
-            System.out.println("Monitor station disconnected");
+            System.out.println("Error: Server status");
         }
         new Thread(new Runnable(){
             @Override
             public void run() {
                String input = new Scanner(System.in).nextLine();
                if(input.startsWith("@add")){
+                   //add new user
                    String uname = input.split(" ")[1];
                    String pwd = input.split(" ")[2];
                    addUser(uname, pwd);
                }else if(input.startsWith("@remove")){
+                   //remove existing user
                    String uname = input.split(" ")[1];
                    removeUser(uname);
+               }else if(input.equals("exit")){
+                   //shut down server
+                   System.out.println("Shutting down server...");
+                   System.exit(0);
                }
             }
         }).start();
@@ -71,13 +101,13 @@ public class Server extends UnicastRemoteObject implements ServerRMI, Runnable{
         ServerSocket serverSock = null;
         Socket clientSock = null;
         ObjectInputStream input = null;
-        final int PORT = 9999;
         try{
-            serverSock = new ServerSocket(PORT);
+            serverSock = new ServerSocket(server_com_port);
         }catch(IOException e){
             System.out.println("Error: Server initialization failed");
         }
-        System.out.println("Server listening on port "+PORT+" for sensors");
+        System.out.println("Server started...\nListening on port "+server_com_port+" for sensors");
+        System.out.println("Type 'exit' to shutdown server");
         while(true){
             try {
                 clientSock = serverSock.accept();
