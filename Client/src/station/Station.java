@@ -137,6 +137,7 @@ public class Station extends UnicastRemoteObject implements StationRMI, Runnable
             public void run() {
                 while (true) {
                     try {
+                        //close user session on invalid credentials
                         if(!server.authenticateUser(username.getText(), password.getText())){
                             javax.swing.JOptionPane.showMessageDialog(stationInterface, "Error: User session expired!");
                             System.exit(1);
@@ -199,21 +200,25 @@ public class Station extends UnicastRemoteObject implements StationRMI, Runnable
         
     }
     
+    //set the connected sensor count
     @Override
     public void setConnectedSensors(int count) throws RemoteException {
         stationInterface.setConnectedSensors(count);
     }
     
+    //set the active sensors list
     @Override
     public void setSensorList(ArrayList<String> list) throws RemoteException {
         stationInterface.getConnectedSensorsList().setListData(list.toArray());
     }
     
+    //set the connected monitoring stations count
     @Override
     public void setMonitoringStationsCount(int count) throws RemoteException {
         stationInterface.setConnectedMonitoringStations(count);
     }
     
+    //get sensor readings from the server given a sensor name
     public static ArrayList<String> getSensorReadings(String name) {
         try {
             return server.getSensorReadings(name);
