@@ -60,7 +60,7 @@ public class Station extends UnicastRemoteObject implements StationRMI, Runnable
         //Locate Registry and connect
         try{
             System.setSecurityManager(new RMISecurityManager());
-            Registry reg = LocateRegistry.getRegistry("localhost",1009);
+            Registry reg = LocateRegistry.getRegistry("localhost",1099);
             server = (ServerRMI) reg.lookup("server");
             station = new Station();
             

@@ -42,7 +42,7 @@ public class Server extends UnicastRemoteObject implements ServerRMI, Runnable{
         sensorThreads = new HashMap<>();
         
         try {
-            Registry reg = LocateRegistry.createRegistry(1009);
+            Registry reg = LocateRegistry.createRegistry(1099);
             Server server = new Server();
             reg.rebind("server",server);
             Thread thread = new Thread(server);
@@ -58,6 +58,9 @@ public class Server extends UnicastRemoteObject implements ServerRMI, Runnable{
                    String uname = input.split(" ")[1];
                    String pwd = input.split(" ")[2];
                    addUser(uname, pwd);
+               }else if(input.startsWith("@remove")){
+                   String uname = input.split(" ")[1];
+                   removeUser(uname);
                }
             }
         }).start();
@@ -68,11 +71,11 @@ public class Server extends UnicastRemoteObject implements ServerRMI, Runnable{
         ServerSocket serverSock = null;
         Socket clientSock = null;
         ObjectInputStream input = null;
-        final int PORT = 6666;
+        final int PORT = 9999;
         try{
             serverSock = new ServerSocket(PORT);
         }catch(IOException e){
-            e.printStackTrace();
+            System.out.println("Error: Server initialization failed");
         }
         System.out.println("Server listening on port "+PORT+" for sensors");
         while(true){
@@ -221,7 +224,22 @@ public class Server extends UnicastRemoteObject implements ServerRMI, Runnable{
     
     //Remove user
     private static void removeUser(String uname){
-        
+        try(BufferedReader bf = new BufferedReader(new FileReader("users.conf"))){
+            String encrypted_uname_check = AESEncryption.encrypt(uname);
+            ArrayList<String> users = new ArrayList<>();
+            for(String inputLine; (inputLine=bf.readLine())!=null;){
+                if(!inputLine.split(" ")[1].equals(encrypted_uname_check)){
+                    users.add(inputLine);
+                }
+            }
+            fileOutput = new FileWriter("users.conf");
+            for(String user : users)
+                fileOutput.write(user);
+            fileOutput.close();
+            System.out.println("User removed: "+uname);
+        }catch(Exception ex){
+            System.out.println("Error: Could not remove user - "+ex);
+        }
     }
 }
 //used to create seperate threads for each connected sensor

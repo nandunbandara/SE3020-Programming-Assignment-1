@@ -60,7 +60,7 @@ public class SensorApplication {
         
         //create socket and object streaming object for client communications
         try{
-            clientSock = new Socket("127.0.0.1",6666);
+            clientSock = new Socket("127.0.0.1",9999);
             clientOut = new ObjectOutputStream(clientSock.getOutputStream());
         }catch(Exception ex){
             ex.printStackTrace();
