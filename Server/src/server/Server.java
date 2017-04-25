@@ -65,6 +65,7 @@ public class Server extends UnicastRemoteObject implements ServerRMI, Runnable{
         stations = new ArrayList<StationRMI>();
         sensorThreads = new HashMap<>();
         
+        //RMI
         try {
             Server server = new Server();
             Registry reg = LocateRegistry.createRegistry(rmi_port);
@@ -102,6 +103,7 @@ public class Server extends UnicastRemoteObject implements ServerRMI, Runnable{
         Socket clientSock = null;
         ObjectInputStream input = null;
         try{
+            //create a server socket to listen on for connections
             serverSock = new ServerSocket(server_com_port);
         }catch(IOException e){
             System.out.println("Error: Server initialization failed");
@@ -114,20 +116,22 @@ public class Server extends UnicastRemoteObject implements ServerRMI, Runnable{
                 SensorThread sensor = new SensorThread(clientSock,sensors);
                 sensor.start();
                 String sensor_name = sensor.getLocation()+"-"+sensor.getType();
+                //update the connected sensors list and the count of connected sensors
                 updateConnectedSensors();
                 updateConnectedSensorsCount();
             } catch (IOException ex) {
-                Logger.getLogger(Server.class.getName()).log(Level.SEVERE, null, ex);
+                
             }
         }
     }
     
+    //add a new monitoring station
      @Override
     public void addStation(StationRMI station) throws RemoteException {
         Server.stations.add(station);
     }
     
-    
+    //update the list of connected sensors
     public static void updateConnectedSensors(){
         for(StationRMI station : stations){
             try {
@@ -140,6 +144,7 @@ public class Server extends UnicastRemoteObject implements ServerRMI, Runnable{
         }
     }
     
+    //update the connected sensors count
     public static void updateConnectedSensorsCount(){
         for(StationRMI station: stations){
             try{
@@ -152,6 +157,7 @@ public class Server extends UnicastRemoteObject implements ServerRMI, Runnable{
         }
     }
     
+    //add a new sensor
     public static void setSensors(String name){
         sensors.add(name);
     }
@@ -167,6 +173,7 @@ public class Server extends UnicastRemoteObject implements ServerRMI, Runnable{
         }
     }
 
+    //set the list of connected sensors
     @Override
     public void setConnectedSensors() throws RemoteException {
         for(StationRMI station : stations){
@@ -178,6 +185,7 @@ public class Server extends UnicastRemoteObject implements ServerRMI, Runnable{
         }
     }
 
+    //set the count of connected monitoring stations
     @Override
     public void setConnectedMonitoringStationsCount() throws RemoteException {
         for(StationRMI station : stations){
@@ -188,6 +196,7 @@ public class Server extends UnicastRemoteObject implements ServerRMI, Runnable{
         }
     }
 
+    //remove a monitoring station when it disconnects
     @Override
     public void removeMonitoringStation(StationRMI station) throws RemoteException {
         stations.remove(station);
@@ -195,6 +204,7 @@ public class Server extends UnicastRemoteObject implements ServerRMI, Runnable{
         setConnectedMonitoringStationsCount();
     }
 
+    //read from sensor data files and return an array of JSON strings
     @Override
     public ArrayList<String> getSensorReadings(String sensor_name) throws RemoteException {
         ArrayList<String> readings = new ArrayList<>();
@@ -208,6 +218,7 @@ public class Server extends UnicastRemoteObject implements ServerRMI, Runnable{
         return readings;
     }
 
+    //authenticate users logging in through monitoring stations
     @Override
     public boolean authenticateUser(String uname, String pwd) throws RemoteException {
         String encrypted_uname_check;
@@ -219,7 +230,7 @@ public class Server extends UnicastRemoteObject implements ServerRMI, Runnable{
             System.out.println("Error: "+ex);
             return false;
         }
-        
+        //read users.conf
         try(BufferedReader input = new BufferedReader(new FileReader("users.conf"))){
             for(String inputLine; (inputLine=input.readLine())!=null;){
                 if(inputLine.startsWith("#user")&&inputLine.split(" ")[1].equals(encrypted_uname_check)){
@@ -322,7 +333,7 @@ class SensorThread extends Thread{
                         JsonObject jsonObject = new JsonParser().parse(object[i]).getAsJsonObject();
                         location = jsonObject.get("location").toString().split("\"")[1];
                         type = jsonObject.get("type").toString().split("\"")[1];
-                        //alert
+                        //alert monitoring stations
                         double value = Double.parseDouble(jsonObject.get("value").toString());
                         switch(type){
                             case "rainfall":
@@ -340,10 +351,13 @@ class SensorThread extends Thread{
                                 }
                                 break;
                         }
+                        //write the received sensor data into data files
                         fileOutput = new FileWriter(location+"_"+type+".txt",true);
                         fileOutput.write(jsonObject.toString()+"\n");
                         fileOutput.close();
                     }
+                    //send logs to all monitoring stations 
+                    //notify them for received sensor readings
                     for(StationRMI station : Server.stations){
                             station.addLog("Log: Received readings from "+location+"-"+type);
                     }
@@ -358,7 +372,7 @@ class SensorThread extends Thread{
         try {
             clientSocket.close();
         } catch (IOException ex) {
-            Logger.getLogger(SensorThread.class.getName()).log(Level.SEVERE, null, ex);
+            System.out.println("Error: Can not close the client port!");
         }
     }
     
