@@ -66,8 +66,8 @@ public class Server extends UnicastRemoteObject implements ServerRMI, Runnable{
         sensorThreads = new HashMap<>();
         
         try {
-            Registry reg = LocateRegistry.createRegistry(rmi_port);
             Server server = new Server();
+            Registry reg = LocateRegistry.createRegistry(rmi_port);
             reg.rebind("server",server);
             Thread thread = new Thread(server);
             thread.start();
@@ -224,7 +224,6 @@ public class Server extends UnicastRemoteObject implements ServerRMI, Runnable{
             for(String inputLine; (inputLine=input.readLine())!=null;){
                 if(inputLine.startsWith("#user")&&inputLine.split(" ")[1].equals(encrypted_uname_check)){
                     if(inputLine.split(" ")[2].equals(encrypted_pwd_check)){
-                        System.out.println("User authenticated: "+uname);
                         return true;
                     }
                     else
@@ -245,7 +244,7 @@ public class Server extends UnicastRemoteObject implements ServerRMI, Runnable{
             String encryptedPwd = AESEncryption.encrypt(pwd);
             fileOutput = new FileWriter("users.conf",true);
             fileOutput.write("#user "+encryptedUName+" "+encryptedPwd+"\n");
-            System.out.println("User added: uname");
+            System.out.println("User added:"+uname);
             fileOutput.close();
         } catch (Exception ex) {
             System.out.println("Error: Can not add user" + ex);
@@ -258,13 +257,13 @@ public class Server extends UnicastRemoteObject implements ServerRMI, Runnable{
             String encrypted_uname_check = AESEncryption.encrypt(uname);
             ArrayList<String> users = new ArrayList<>();
             for(String inputLine; (inputLine=bf.readLine())!=null;){
-                if(!inputLine.split(" ")[1].equals(encrypted_uname_check)){
+                if(inputLine.startsWith("#user")&&!inputLine.split(" ")[1].equals(encrypted_uname_check)){
                     users.add(inputLine);
                 }
             }
             fileOutput = new FileWriter("users.conf");
             for(String user : users)
-                fileOutput.write(user);
+                fileOutput.write(user+"\n");
             fileOutput.close();
             System.out.println("User removed: "+uname);
         }catch(Exception ex){

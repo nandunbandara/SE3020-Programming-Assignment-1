@@ -216,7 +216,6 @@ public class StationInterface extends javax.swing.JFrame{
 
     private void btnLogoutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLogoutActionPerformed
         // TODO add your handling code here:
-        
         int result = JOptionPane.showConfirmDialog(rootPane, "Do you want to exit?","Exit", JOptionPane.YES_NO_OPTION );
         if(result==JOptionPane.YES_OPTION){
             System.exit(0);

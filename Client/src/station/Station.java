@@ -29,19 +29,22 @@ import javax.swing.text.BadLocationException;
 import javax.swing.text.Document;
 import javax.swing.text.SimpleAttributeSet;
 import javax.swing.text.StyleConstants;
+
 /**
  *
  * @author ntban_000
  */
-public class Station extends UnicastRemoteObject implements StationRMI, Runnable{
+public class Station extends UnicastRemoteObject implements StationRMI, Runnable {
+
     private static StationInterface stationInterface;
     private static ServerRMI server;
     private static Station station;
-    public Station() throws RemoteException{
+
+    public Station() throws RemoteException {
         
     }
     
-    public static void main(String[] args){
+    public static void main(String[] args) {
         //Remove monitoring station from the server's record on exit
         Runtime.getRuntime().addShutdownHook(new Thread(new Runnable() {
             public void run() {
@@ -49,32 +52,29 @@ public class Station extends UnicastRemoteObject implements StationRMI, Runnable
                     server.removeMonitoringStation(station);
                 } catch (RemoteException ex) {
                     Logger.getLogger(Station.class.getName()).log(Level.SEVERE, null, ex);
-                } catch(NullPointerException e){
+                } catch (NullPointerException e) {
                     
                 }
             }
         }));
-        
-        
-        
+
         //Locate Registry and connect
-        try{
+        try {
             System.setSecurityManager(new RMISecurityManager());
-            Registry reg = LocateRegistry.getRegistry("localhost",1099);
+            Registry reg = LocateRegistry.getRegistry("localhost", 1099);
             server = (ServerRMI) reg.lookup("server");
             station = new Station();
-            
-        }catch(ConnectException e){
-            javax.swing.JOptionPane.showMessageDialog(stationInterface, "Server is not running!");
+        } catch (ConnectException e) {
+            javax.swing.JOptionPane.showMessageDialog(stationInterface, "Server is not running!"+e);
             System.exit(0);
-        }catch(RemoteException e){
+        } catch (RemoteException e) {
             javax.swing.JOptionPane.showMessageDialog(stationInterface, e);
             System.exit(0);
-        }catch(NotBoundException e){
+        } catch (NotBoundException e) {
             javax.swing.JOptionPane.showConfirmDialog(stationInterface, e);
             System.exit(0);
         }
-        
+
         //Login Popup
         JPanel panel = new JPanel(new BorderLayout(5, 5));
         JFrame frame = new JFrame();
@@ -82,7 +82,7 @@ public class Station extends UnicastRemoteObject implements StationRMI, Runnable
         label.add(new JLabel("Username", SwingConstants.RIGHT));
         label.add(new JLabel("Password", SwingConstants.RIGHT));
         panel.add(label, BorderLayout.WEST);
-
+        
         JPanel controls = new JPanel(new GridLayout(0, 1, 2, 2));
         JTextField username = new JTextField();
         controls.add(username);
@@ -92,20 +92,40 @@ public class Station extends UnicastRemoteObject implements StationRMI, Runnable
         
         JOptionPane.showMessageDialog(frame, panel, "login", JOptionPane.OK_CANCEL_OPTION);
         try {
-            if(!server.authenticateUser(username.getText(), password.getText())){
-                JOptionPane.showMessageDialog(panel, "Could not validate user: "+username.getText());
+            if (!server.authenticateUser(username.getText(), password.getText())) {
+                JOptionPane.showMessageDialog(panel, "Could not validate user: " + username.getText());
                 System.exit(0);
-            }else{
+            } else {
                 server.addStation(station);
                 station.run();
             }
             //end login
         } catch (RemoteException ex) {
-            JOptionPane.showMessageDialog(panel, "Could not validate user: "+username.getText());
+            JOptionPane.showMessageDialog(panel, "Could not validate user: " + username.getText());
             System.exit(0);
         }
+
+        //start thread to authenticate user every 5 seconds
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+                while (true) {
+                    try {
+                        if(!server.authenticateUser(username.getText(), password.getText())){
+                            javax.swing.JOptionPane.showMessageDialog(stationInterface, "Error: User session expired!");
+                            System.exit(1);
+                        }
+                        Thread.sleep(2000);
+                    } catch (RemoteException ex) {
+                        System.out.println("Could not validate user");
+                    } catch (InterruptedException ex) {
+                        System.out.println("Could not validate user");
+                    }
+                }
+            }            
+        }).start();
     }
-    
+
     //Alerts from sensors method
     @Override
     public void alert(String alertText) throws RemoteException {
@@ -114,8 +134,8 @@ public class Station extends UnicastRemoteObject implements StationRMI, Runnable
         SimpleAttributeSet red = new SimpleAttributeSet();
         StyleConstants.setFontFamily(red, "Courier New Italic");
         StyleConstants.setForeground(red, Color.RED);
-            
-        try{
+        
+        try {
             doc.insertString(doc.getLength(), alertText, red);
         } catch (BadLocationException ex) {
             System.out.println("Error writing logs/alerts");
@@ -130,15 +150,15 @@ public class Station extends UnicastRemoteObject implements StationRMI, Runnable
         SimpleAttributeSet blue = new SimpleAttributeSet();
         StyleConstants.setFontFamily(blue, "Courier New Italic");
         StyleConstants.setForeground(blue, Color.BLUE);
-
-        try{
-            doc.insertString(doc.getLength(), logText+"\n", blue);
+        
+        try {
+            doc.insertString(doc.getLength(), logText + "\n", blue);
         } catch (BadLocationException ex) {
             System.out.println("Error writing logs/alerts");
         }
         stationInterface.getTextPane().setCaretPosition(doc.getLength());
     }
-
+    
     @Override
     public void run() {
         try {
@@ -152,23 +172,23 @@ public class Station extends UnicastRemoteObject implements StationRMI, Runnable
         }
         
     }
-
+    
     @Override
     public void setConnectedSensors(int count) throws RemoteException {
         stationInterface.setConnectedSensors(count);
     }
     
     @Override
-    public void setSensorList(ArrayList<String> list) throws RemoteException{
+    public void setSensorList(ArrayList<String> list) throws RemoteException {
         stationInterface.getConnectedSensorsList().setListData(list.toArray());
     }
-
+    
     @Override
     public void setMonitoringStationsCount(int count) throws RemoteException {
         stationInterface.setConnectedMonitoringStations(count);
     }
     
-    public static ArrayList<String> getSensorReadings(String name){
+    public static ArrayList<String> getSensorReadings(String name) {
         try {
             return server.getSensorReadings(name);
         } catch (RemoteException ex) {
